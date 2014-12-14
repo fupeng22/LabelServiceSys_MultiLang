@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabelServiceSys_MultiLang", "LabelServiceSys\LabelServiceSys_MultiLang.csproj", "{23B1027F-DA90-4536-B777-9203D9360218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLDAL", "SQLDAL\SQLDAL.csproj", "{77A848AE-5F92-4644-A374-44597B28080D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F6A6330A-8D0B-4051-B33C-7C233D587749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUtility.csproj", "{6208E215-94CA-46ED-8022-EEAAF3725FD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{2C41C34C-7DA8-4DC9-A9A8-87D676088813}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23B1027F-DA90-4536-B777-9203D9360218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B1027F-DA90-4536-B777-9203D9360218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B1027F-DA90-4536-B777-9203D9360218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B1027F-DA90-4536-B777-9203D9360218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A848AE-5F92-4644-A374-44597B28080D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A848AE-5F92-4644-A374-44597B28080D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A848AE-5F92-4644-A374-44597B28080D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A848AE-5F92-4644-A374-44597B28080D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A6330A-8D0B-4051-B33C-7C233D587749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A6330A-8D0B-4051-B33C-7C233D587749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A6330A-8D0B-4051-B33C-7C233D587749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A6330A-8D0B-4051-B33C-7C233D587749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6208E215-94CA-46ED-8022-EEAAF3725FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6208E215-94CA-46ED-8022-EEAAF3725FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6208E215-94CA-46ED-8022-EEAAF3725FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6208E215-94CA-46ED-8022-EEAAF3725FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C41C34C-7DA8-4DC9-A9A8-87D676088813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C41C34C-7DA8-4DC9-A9A8-87D676088813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C41C34C-7DA8-4DC9-A9A8-87D676088813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C41C34C-7DA8-4DC9-A9A8-87D676088813}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

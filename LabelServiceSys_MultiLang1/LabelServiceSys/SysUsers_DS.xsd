@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SysUsers_DS" targetNamespace="http://tempuri.org/Users_DS.xsd" xmlns:mstns="http://tempuri.org/Users_DS.xsd" xmlns="http://tempuri.org/Users_DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SysUsers_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SysUsers_DS" msprop:Generator_UserDSName="SysUsers_DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auNum" msprop:Generator_ColumnVarNameInTable="columnauNum" msprop:Generator_ColumnPropNameInRow="auNum" msprop:Generator_ColumnPropNameInTable="auNumColumn" msprop:Generator_UserColumnName="auNum" type="xs:string" minOccurs="0" />
+              <xs:element name="auPSW" msprop:Generator_ColumnVarNameInTable="columnauPSW" msprop:Generator_ColumnPropNameInRow="auPSW" msprop:Generator_ColumnPropNameInTable="auPSWColumn" msprop:Generator_UserColumnName="auPSW" type="xs:string" minOccurs="0" />
+              <xs:element name="auUnitCodeIDs" msprop:Generator_ColumnVarNameInTable="columnauUnitCodeIDs" msprop:Generator_ColumnPropNameInRow="auUnitCodeIDs" msprop:Generator_ColumnPropNameInTable="auUnitCodeIDsColumn" msprop:Generator_UserColumnName="auUnitCodeIDs" type="xs:string" minOccurs="0" />
+              <xs:element name="auUnitCodeIDs_Des" msprop:Generator_ColumnVarNameInTable="columnauUnitCodeIDs_Des" msprop:Generator_ColumnPropNameInRow="auUnitCodeIDs_Des" msprop:Generator_ColumnPropNameInTable="auUnitCodeIDs_DesColumn" msprop:Generator_UserColumnName="auUnitCodeIDs_Des" type="xs:string" minOccurs="0" />
+              <xs:element name="auDelflag" msprop:Generator_ColumnVarNameInTable="columnauDelflag" msprop:Generator_ColumnPropNameInRow="auDelflag" msprop:Generator_ColumnPropNameInTable="auDelflagColumn" msprop:Generator_UserColumnName="auDelflag" type="xs:string" minOccurs="0" />
+              <xs:element name="auID" msprop:Generator_ColumnVarNameInTable="columnauID" msprop:Generator_ColumnPropNameInRow="auID" msprop:Generator_ColumnPropNameInTable="auIDColumn" msprop:Generator_UserColumnName="auID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

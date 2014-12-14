@@ -1,0 +1,140 @@
+﻿@using LabelServiceSys.Models;
+<script type="text/javascript">
+@Html.Raw(Html.LangOutJsVar("Default_JS_defaultTabTitle"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_Title"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_AskForExit"));
+@Html.Raw(LangHelper.WhichLang());
+</script>
+@{
+    Layout = "~/Views/Default/_Layout.cshtml";
+}
+<div id="layout_Main" class="easyui-layout" data-options="fit:true,border:false">
+    <div region="north" split="false" style="height: 30px; padding: 2px" border="true">
+        <span style="float: left; font-weight: bold; font-size: medium">&nbsp;&nbsp;&nbsp; @Html.GetLangbyKey("Default_Html_CurrentUser"):<font
+            style="color: Red">@Session["Global_UserName"]</font> &nbsp;&nbsp;&nbsp;</span>
+        <span style="float: left; font-weight: bold; font-size: medium">&nbsp;&nbsp;&nbsp; 用户角色:<font 
+            style="color: Red"  title='@Session["Global_Roles"].ToString()' class="easyui-tooltip">@Html.Raw(Session["Global_Roles"].ToString().Length > 10 ? (Session["Global_Roles"].ToString().Substring(0, 10) + "...") : Session["Global_Roles"].ToString())</font>
+            &nbsp;&nbsp;&nbsp;</span> <span style="float: right"><span id="lblCurrentDate"></span>
+                &nbsp;&nbsp;&nbsp;<a href="#" id="btnRelogin" class="easyui-linkbutton" data-options="iconCls:'icon-exit'">@Html.GetLangbyKey("Default_Html_Exit")</a>&nbsp;&nbsp;&nbsp;</span>
+        @{
+            string controller = ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString();
+            string action = ViewContext.Controller.ValueProvider.GetValue("action").RawValue.ToString();
+            string lang = ViewContext.Controller.ValueProvider.GetValue("lang").RawValue.ToString();
+        }
+        @Html.ActionLink("中文", action, new { Controller = controller, lang = "zh-CN" }, new { @class = "btn-a" })
+        @Html.ActionLink("English", action, new { Controller = controller, lang = "en-US" }, new { @class = "btn-a" })
+    </div>
+    <div region="west" split="true" style="width: 150px;" border="false">
+        <div id="LeftNavigation" class="easyui-accordion" fit="true">
+            @* <div title="后台工作区" style="overflow: auto;" iconcls="icon-huayu-instore">*@
+            <div title="@Html.GetLangbyKey("Default_Html_LeftNavigation_Title")" style="overflow: auto;" iconcls="icon-huayu-instore">
+                <div class="cls_vertmenu">
+                    <ul>
+                        @* <li><a href="#" id="btnUserManagement" name="btnUserManagement" tabindex="1">用&nbsp;户&nbsp;信&nbsp;息&nbsp;管&nbsp;理</a></li>
+                        <li><a href="#" id="btnOperationLog" name="btnOperationLog" tabindex="1">日&nbsp;志&nbsp;信&nbsp;息&nbsp;管&nbsp;理</a></li>
+                        <li><a href="#" id="btnOperationLog_Hawb" name="btnOperationLog_Hawb" tabindex="1">分&nbsp;单&nbsp;号&nbsp;日&nbsp;志&nbsp;表</a></li>
+                        <li><a href="#" id="btnOperationLog_HU" name="btnOperationLog_HU" tabindex="1">袋&nbsp;号&nbsp;日&nbsp;志&nbsp;表</a></li>
+                        <li><a href="#" id="btnOperationLog_Pcid" name="btnOperationLog_Pcid" tabindex="1">件&nbsp;号&nbsp;日&nbsp;志&nbsp;表</a></li>
+                        <li><a href="#" id="btnOperationLog_Login" name="btnOperationLog_Login" tabindex="1">
+                            登&nbsp;录&nbsp;登&nbsp;出&nbsp;日&nbsp;志</a></li>
+                        <li><a href="#" id="btnOperationLog_Other" name="btnOperationLog_Other" tabindex="1">
+                            其&nbsp;他&nbsp;日&nbsp;志&nbsp;信&nbsp;息</a></li>*@ @* <li><a href="#" id="btnOperationLog" name="btnOperationLog" tabindex="1">日&nbsp;志&nbsp;信&nbsp;息&nbsp;管&nbsp;理</a></li>*@
+                        <li><a href="#" id="btnOperationLog_Hawb" name="btnOperationLog_Hawb" tabindex="1">@Html.GetLangbyKey("Default_Html_btnOperationLog_Hawb")</a></li>
+                        <li><a href="#" id="btnOperationLog_Pcid" name="btnOperationLog_Pcid" tabindex="1">@Html.GetLangbyKey("Default_Html_btnOperationLog_Pcid")</a></li>
+                        <li><a href="#" id="btnOperationLog_Hawb_Pcid" name="btnOperationLog_Hawb_Pcid" tabindex="1"><font style="color:blue">分单号件号综合日志</font></a></li>
+                        <li><a href="#" id="btnOperationLog_HU" name="btnOperationLog_HU" tabindex="1">@Html.GetLangbyKey("Default_Html_btnOperationLog_HU")</a></li>
+                        <li><a href="#" id="btnOperationLog_Login" name="btnOperationLog_Login" tabindex="1">
+                            @Html.GetLangbyKey("Default_Html_btnOperationLog_Login")</a></li>
+                        <li><a href="#" id="btnOperationLog_Other" name="btnOperationLog_Other" tabindex="1">
+                            @Html.GetLangbyKey("Default_Html_btnOperationLog_Other")</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div title="后台管理区" style="overflow: auto;" iconcls="icon-huayu-instore">
+                <div class="cls_vertmenu">
+                    <ul>
+                        <li><a href="#" id="btnUserManagement" name="btnUserManagement" tabindex="1">@Html.GetLangbyKey("Default_Html_btnUserManagement")</a></li>
+                        <li id="li_btnSysUserManagement"><a href="#" id="btnSysUserManagement" name="btnSysUserManagement"
+                            tabindex="1">系统用户信息管理</a></li>
+                        <li><a href="#" id="btnJobNameManagement" name="btnJobNameManagement" tabindex="1">一级二级工作内容</a></li>
+                        <li><a href="#" id="btnPosition_CCTV_Workstation" name="btnPosition_CCTV_Workstation"
+                            tabindex="1">工&nbsp;位&nbsp;标&nbsp;签&nbsp;绑&nbsp;定</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div region="center" style="background: #eee;" border="false" split="true">
+        <div id="tab_Content" class="easyui-tabs" fit="true" border="false">
+            @*<div title="使用指南" style="padding: 0px;">
+            </div>*@
+            <div title="@Html.GetLangbyKey("Default_Html_tab_Content_1")" style="padding: 0px;">
+            </div>
+        </div>
+    </div>
+    <div region="south" split="true" style="height: 30px;" border="false">
+        <div align="center">
+            CopyRight@2006-2012 <a target="_blank" href="http://www.chinabetter.com">www.chinabetter.com</a></div>
+    </div>
+</div>
+<div id="mm" class="easyui-menu" style="width: 250px; display: none">
+    @*<div id="mm-tabupdate" iconcls="icon-reload">
+        刷新</div>
+    <div class="menu-sep">
+    </div>
+    <div id="mm-tabclose">
+        关闭</div>
+    <div id="mm-tabcloseall">
+        全部关闭</div>
+    <div id="mm-tabcloseother">
+        除此之外全部关闭</div>
+    <div class="menu-sep">
+    </div>
+    <div id="mm-tabcloseright">
+        当前页右侧全部关闭</div>
+    <div id="mm-tabcloseleft">
+        当前页左侧全部关闭</div>
+    <div class="menu-sep">
+    </div>
+    <div id="mm-exit">
+        退出</div>*@
+    <div id="mm-tabupdate" iconcls="icon-reload">
+        @Html.GetLangbyKey("Default_Html_mm_tabupdate")</div>
+    <div class="menu-sep">
+    </div>
+    <div id="mm-tabclose">
+        @Html.GetLangbyKey("Default_Html_mm_tabclose")</div>
+    <div id="mm-tabcloseall">
+        @Html.GetLangbyKey("Default_Html_mm_tabcloseall")</div>
+    <div id="mm-tabcloseother">
+        @Html.GetLangbyKey("Default_Html_mm_tabcloseother")</div>
+    <div class="menu-sep">
+    </div>
+    <div id="mm-tabcloseright">
+        @Html.GetLangbyKey("Default_Html_mm_tabcloseright")</div>
+    <div id="mm-tabcloseleft">
+        @Html.GetLangbyKey("Default_Html_mm_tabcloseleft")</div>
+    <div class="menu-sep">
+    </div>
+    <div id="mm-exit">
+        @Html.GetLangbyKey("Default_Html_mm_exit")</div>
+</div>
+<div id="dlg_Print" data-options="iconCls:'icon-print'" style="padding: 1px; display: none">
+</div>
+<div id="dlg_GlobalPrint" fit="true" data-options="iconCls:'icon-print'" style="padding: 1px;
+    display: none">
+    @*    <div id="p" class="easyui-progressbar" data-options="value:60" style="width:400px;"></div>*@
+    <iframe src="" style="width: 98%; height: 98%" id="frmPrintURL"></iframe>
+</div>
+<div id="dlg_GlobalDetail" fit="true" data-options="iconCls:'icon-save'" style="padding: 1px;
+    width: 400px; height: 300px;">
+</div>
+<div id="dlg_GlobalPrintSheet" fit="true" data-options="iconCls:'icon-save'" style="padding: 1px;
+    width: 400px; height: 300px;">
+</div>
+<div id="dlg_MsgAlert" style="padding: 1px; display: none">
+    <input type="text" style="display: block; width: 0px; height: 0px; border: 0" id="txtGlobalTextInput"
+        name="txtGlobalTextInput" />
+    <div id="msgContent">
+    </div>
+</div>

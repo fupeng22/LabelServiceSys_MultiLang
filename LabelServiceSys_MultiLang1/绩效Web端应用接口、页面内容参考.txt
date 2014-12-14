@@ -1,0 +1,121 @@
+0.Web端部署说明
+  不同DHL口岸单位单独部署Web应用，但数据库使用DHL指定的单一数据库服务器地址。
+  每个DHL一定都配置有服务器，具备部署所需环境，每个单位的Web服务独立，可以免去资源互相干扰，上层数据库服务有DHL提供，他们可以根据工作负荷提升资源。
+
+1. 基础数据：AdminUser，建议增设
+   这部分内容是额外用于管理不同地域，限定地域Admin能够管理到的User
+   表如下：
+CREATE TABLE [dbo].[AdminUser] (
+	[auID] [int] IDENTITY (1, 1) NOT NULL ,					--自动编号
+	[auNum] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,		--管理员用户名
+	[auPSW] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,		--管理员密码，MD5校验码
+	[auUnitCodeIDs] [nvarchar] (500) COLLATE Chinese_PRC_CI_AS NULL ,	--管理原所属单位代码组，与UnitCode表有关，多个用“,”隔开，如：1,2
+	[auDelflag] [int] NULL 							--删除标记，0未删除，1删除
+) ON [PRIMARY]
+  仅由超级管理员访问和管理，超级管理员/密码由我们自己内定，写在数据库的一个冗余表的冗余字段里即可，
+
+2. 基础数据：UnitCode，建议增设
+CREATE TABLE [dbo].[UnitCode] (
+	[ucID] [int] IDENTITY (1, 1) NOT NULL ,			--自动编号
+	[ucName] [char] (10) COLLATE Chinese_PRC_CI_AS NULL ,	--单位代码，如：PEK GTW
+	[ucDelflag] [char] (10) COLLATE Chinese_PRC_CI_AS NULL 	--删除标记，0未删除，1删除
+) ON [PRIMARY]
+   仅由超级管理员访问和管理
+
+3. 绩效基础数据：User管理页面
+CREATE TABLE [dbo].[User] (
+	[urID] [int] IDENTITY (1, 1) NOT NULL ,				--User表递增ID
+	[urNum] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--用户号
+	[urPSW] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--用户密码，仅存放MD5校验字
+	[urName] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--用户姓名
+	[urSex] [int] NULL ,						--用户性别，0男，1女
+	[urAge] [int] NULL ,						--用户年龄
+	[urStaffNum] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--员工工号
+	[urDept] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--用户部门
+	[urDuty] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--用户职位
+	[urUnitCode] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--用户单位代码
+	[urMemo] [nvarchar] (500) COLLATE Chinese_PRC_CI_AS NULL ,	--备注
+	[urDelflag] [int] NULL 						--删除标志，0-未删除，1-已删除
+) ON [PRIMARY]
+   PC端使用，只需要实现“增删改查”即可
+   注意：需要用AdminUser表的“auUnitCodes”字段筛选查询结果、增加时urUnitCode为范围内
+         即先在管理员登陆时，将auUnitCodeIDs读入变量，在增加User时，列出允许被看到的UnitCode时，用类似“"SELECT * FROM UnitCOde WHERE ucID IN (0"+UnitCodeIDs+")"”的方法即可。
+
+4. 绩效日志数据及与PDA(或DHL作业终端)接口建议：
+   A) 各个日志表定义：
+      i/ 分单号日志表：OperationLog_Hawb
+CREATE TABLE [dbo].[OperationLog_Hawb] (
+	[hawbopID] [int] IDENTITY (1, 1) NOT NULL ,				--自动编号
+	[hawbop_urID] [int] NULL ,						--绑定的用户ID
+	[hawbopJobNameIdLv1] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(大类)，对应DHL数据库中的tb_Setting_WorkProcess_L1.vchar_WorkProcess_L1_Code
+	[hawbopJobNameIdLv2] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(小类)，对应DHL数据库中的tb_Setting_WorkProcess_L2.vchar_WorkProcess_L2_Code
+	[hawbopContent] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--扫描内容，这里指分单号
+	[hawbopDateTime] [datetime] NULL ,					--扫描时间
+	[hawbopIsDvir] [int] NULL 						--是否有DVIR，0无，1有
+) ON [PRIMARY]
+
+      ii/ 件号日志表：OperationLog_Pcid
+CREATE TABLE [dbo].[OperationLog_Pcid] (
+	[pcidopID] [int] IDENTITY (1, 1) NOT NULL ,				--自动编号
+	[pcidop_urID] [int] NULL ,						--绑定的用户ID
+	[pcidopJobNameIdLv1] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(大类)，对应DHL数据库中的tb_Setting_WorkProcess_L1.vchar_WorkProcess_L1_Code
+	[pcidopJobNameIdLv2] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(小类)，对应DHL数据库中的tb_Setting_WorkProcess_L2.vchar_WorkProcess_L2_Code
+	[pcidopContent] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--扫描内容，这里指件号
+	[pcidopDateTime] [datetime] NULL ,					--扫描时间
+	[pcidopIsDvir] [int] NULL 						--是否有DVIR，0无，1有
+) ON [PRIMARY]
+
+      iii/ 袋号日志表：OperationLog_HU
+CREATE TABLE [dbo].[OperationLog_HU] (
+	[huopID] [int] IDENTITY (1, 1) NOT NULL ,				--自动编号
+	[huop_urID] [int] NULL ,						--绑定的用户ID
+	[huopJobNameIdLv1] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(大类)，对应DHL数据库中的tb_Setting_WorkProcess_L1.vchar_WorkProcess_L1_Code
+	[huopJobNameIdLv2] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(小类)，对应DHL数据库中的tb_Setting_WorkProcess_L2.vchar_WorkProcess_L2_Code
+	[huopContent] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,		--扫描内容，这里指袋号
+	[huopDateTime] [datetime] NULL ,					--扫描时间
+	[huopIsDvir] [int] NULL 						--是否有DVIR，0无，1有
+) ON [PRIMARY]
+
+      iv/ 登录登出日志表：OperationLog_Login
+CREATE TABLE [dbo].[OperationLog_Login] (
+	[lgopID] [int] IDENTITY (1, 1) NOT NULL ,				--自动编号
+	[lgop_urID] [int] NULL ,						--绑定的用户ID
+	[lgopJobNameIdLv1] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(大类)，对应DHL数据库中的tb_Setting_WorkProcess_L1.vchar_WorkProcess_L1_Code
+	[lgopJobNameIdLv2] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(小类)，对应DHL数据库中的tb_Setting_WorkProcess_L2.vchar_WorkProcess_L2_Code
+	[lgopContent] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,		--登录、登出，可以用大写英文LOGIN或LOGOUT来记录
+	[lgopDateTime] [datetime] NULL ,					--登录、登出时间
+	[lgopIsDvir] [int] NULL 						--是否有DVIR，0无，1有
+) ON [PRIMARY]
+
+      v/ 其他日志表：OperationLog_Other
+CREATE TABLE [dbo].[OperationLog_Other] (
+	[otropID] [int] IDENTITY (1, 1) NOT NULL ,				--自动编号
+	[otrop_urID] [int] NULL ,						--绑定的用户ID
+	[otropJobNameIdLv1] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(大类)，对应DHL数据库中的tb_Setting_WorkProcess_L1.vchar_WorkProcess_L1_Code
+	[otropJobNameIdLv2] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,	--工作内容识别号(小类)，对应DHL数据库中的tb_Setting_WorkProcess_L2.vchar_WorkProcess_L2_Code
+	[otropContent] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,		--扫描内容，这里指未知扫描类别
+	[otropDateTime] [datetime] NULL ,					--扫描时间
+	[otropIsDvir] [int] NULL 						--是否有DVIR，0无，1有
+) ON [PRIMARY]
+
+
+   B) 与PDA或DHL作业终端的接口建议（注：以下所有涉及页面文字均用英文）
+      i/ 绑定和解绑方法（有页面回显要求）：
+         参数如下：
+         (a) devicetype：调用设备类型，会有页面布局上的差别或其他差别，目前会有两种，0为PDA设备(WinCE或Mobile系统)，1为DHL作业终端设备(WIndows桌面系统)，必要项
+         (b) isdvir：是否有DVIR，0无，1有，必要项
+         (c) usernumber：待绑定的用户名，必要项
+         (d) unbind：由PDA端使用代码方式提出解绑请求，若出于绑定状态下，只有unbind为1时，Web端应用才需要响应，无此参数，或为其他值都不用理会，可选项。
+         (e) msn：不重复消息号，用于防止重复提交相同内容，msn构成：2位秒+4位循环自增数（1～9999），如：560008
+         此方法页面建议：
+         (a) 自动判断提交时，提交的UserNumber是否为绑定状态；
+         (b) 未绑定状态，User Number回显、是否有DVIR信息回显、可选的两级工作内容菜单、以及绑定按钮等；
+         (c) 绑定状态：显示User Number、是否有DVIR信息、已绑定的两级工作内容文本、以及解绑按钮等；
+         (d) devicetype=0 (即PDA)，所有信息需要按照200x150(WxH)考虑布局，devicetype=1，布局待定(目前只涉及PDA应用，终端放在下一步)
+
+      ii/ 扫描内容方法（无页面回显要求）
+         (a) devicetype：同上
+         (b) isdvir：同上
+         (c) usernumber：同上
+         (d) data：扫描的数据
+         (e) msn：同上

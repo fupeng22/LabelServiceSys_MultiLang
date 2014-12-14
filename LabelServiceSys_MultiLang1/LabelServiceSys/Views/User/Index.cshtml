@@ -1,0 +1,72 @@
+﻿@using LabelServiceSys.Models;
+<script type="text/javascript">
+@Html.Raw(LangHelper.WhichLang());
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field1"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field2"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field3"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field4"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field5"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field6"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field7"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field8"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Field9"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool1"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool2"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool3"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool4"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool5"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool6"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool7"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool8"));
+@Html.Raw(Html.LangOutJsVar("User_JS_DG_Tool9"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_Title"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_NoDataForPrint"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_NoDataForExcel"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_ButtonOfPrint"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_NoDataSelectForPrint"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_ButtonOfSave"));
+@Html.Raw(Html.LangOutJsVar("User_JS_ErrorMessage1"));
+@Html.Raw(Html.LangOutJsVar("User_JS_ErrorMessage2"));
+@Html.Raw(Html.LangOutJsVar("User_JS_ErrorMessage3"));
+@Html.Raw(Html.LangOutJsVar("Public_Message_OK"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_ButtonOfClose"));
+@Html.Raw(Html.LangOutJsVar("User_Dialog_AddUser_Title"));
+@Html.Raw(Html.LangOutJsVar("User_Dialog_UpdateUser_Title"));
+@Html.Raw(Html.LangOutJsVar("User_JS_ErrorMessage4"));
+@Html.Raw(Html.LangOutJsVar("User_JS_ErrorMessage5"));
+@Html.Raw(Html.LangOutJsVar("User_JS_ErrorMessage6"));
+</script>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.GetLangbyKey("User_Html_Title")</title>
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/jquery.easyui.min.js")" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/black/easyui.css")" rel="stylesheet"
+        title="black" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/bootstrap/easyui.css")" rel="stylesheet"
+        title="bootstrap"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/default/easyui.css")" rel="stylesheet"
+        title="default"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/gray/easyui.css")" rel="stylesheet"
+        title="gray"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/metro/easyui.css")" rel="stylesheet"
+        title="metro"/>
+    <link href="@Url.Content("~/JqueryUI/themes/icon.css")"  rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/JS/UserManagement.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/easyui-lang-zh_CN.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/My97DatePicker/WdatePicker.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JS/Common/Common.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div id="DG_UserMaintain" fit="true">
+    </div>
+    <div id="dlg_Create" data-options="iconCls:'icon-save'" style="padding: 5px;">
+    </div>
+    <div id="dlg_Update" data-options="iconCls:'icon-save'" style="padding: 5px;">
+    </div>
+</body>
+</html>

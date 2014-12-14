@@ -1,0 +1,60 @@
+﻿@using LabelServiceSys.Models;
+<script type="text/javascript">
+@Html.Raw(LangHelper.WhichLang());
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_Title"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_NoDataForPrint"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_NoDataForExcel"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_ButtonOfPrint"));
+</script>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>工位标签绑定</title>
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/jquery.easyui.min.js")" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/black/easyui.css")" rel="stylesheet"
+        title="black" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/bootstrap/easyui.css")" rel="stylesheet"
+        title="bootstrap"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/default/easyui.css")" rel="stylesheet"
+        title="default"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/gray/easyui.css")" rel="stylesheet"
+        title="gray"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/metro/easyui.css")" rel="stylesheet"
+        title="metro"/>
+    <link href="@Url.Content("~/JqueryUI/themes/icon.css")"  rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/JS/Position_CCTV_Workstation.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/easyui-lang-zh_CN.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/My97DatePicker/WdatePicker.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JS/Common/Common.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div id="DG_Position_CCTV_Workstation" fit="true">
+    </div>
+    <div id="dlg_Create_Position_CCTV_Workstation" data-options="iconCls:'icon-save'"
+        style="padding: 1px;">
+        <table>
+            <tr>
+                <td>
+                    工位标签
+                </td>
+                <td>
+                    <input type="text" id="ddlPositionNO" name="ddlPositionNO" />
+                    <input type="hidden" id="hd_Pid" name="hd_Pid" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    对应工作岗位
+                </td>
+                <td>
+                    <input type-"text" id="ddlCCTVWorkstationId" name="ddlCCTVWorkstationId" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

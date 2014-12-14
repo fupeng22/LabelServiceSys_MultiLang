@@ -1,0 +1,71 @@
+﻿@model Model.M_LoginReturn
+@using LabelServiceSys.Models;
+<script type="text/javascript">
+@Html.Raw(LangHelper.WhichLang());
+</script>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Html.GetLangbyKey("LoginCenter_Html_Index_Title")</title>
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JS/LoginCenter_LoginInfo.js")" type="text/javascript"></script>
+</head>
+<body style="padding: 0px; background-color: #FFFF80; font-size: 9px">
+    <table style="background-color: #FFFF80; padding: 0px; font-size:11px">
+        <tr>
+            <td>
+                <span id="lblErrorTip"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.GetLangbyKey("LoginCenter_Html_Index_UserName"):
+                <input  type="hidden" id="txtIsLogin" name="txtIsLogin" value="@Model.IsLogin_i"/>
+                <input  type="hidden" id="txtUserNumber" name="txtUserNumber" value="@Model.UserNumber"/>
+                <input  type="hidden" id="txtIsDVIR" name="txtIsDVIR" value="@Model.IsDVIR"/>
+                <input  type="hidden" id="hd_getWorkstationId" name="hd_getWorkstationId" value="@Model.getWorkstationId"/>
+                <input  type="hidden" id="WorkstationId" name="WorkstationId" value="@Model.WorkstationId"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="spanUserName">@Model.UserNumber</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.GetLangbyKey("LoginCenter_Html_Index_HasDVIR"): @Model.IsDVIRDesc
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.GetLangbyKey("LoginCenter_Html_Index_JobContent1"):
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;@Model.WorkProcess_L1_Text
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.GetLangbyKey("LoginCenter_Html_Index_JobContent2"):
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;@Model.WorkProcess_L2_Text
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" id="btnLoginOut" name="btnLoginOut" value="@Html.GetLangbyKey("LoginCenter_Html_Index_btnLoginOut")" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

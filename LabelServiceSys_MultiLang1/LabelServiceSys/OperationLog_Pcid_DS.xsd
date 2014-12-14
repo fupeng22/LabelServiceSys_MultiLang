@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OperationLog_Pcid_DS" targetNamespace="http://tempuri.org/OperationLog_Pcid_DS.xsd" xmlns:mstns="http://tempuri.org/OperationLog_Pcid_DS.xsd" xmlns="http://tempuri.org/OperationLog_Pcid_DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OperationLog_Pcid_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OperationLog_Pcid_DS" msprop:Generator_UserDSName="OperationLog_Pcid_DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pcidopID" msprop:Generator_ColumnVarNameInTable="columnpcidopID" msprop:Generator_ColumnPropNameInRow="pcidopID" msprop:Generator_ColumnPropNameInTable="pcidopIDColumn" msprop:Generator_UserColumnName="pcidopID" type="xs:string" minOccurs="0" />
+              <xs:element name="pcidop_urID" msprop:Generator_ColumnVarNameInTable="columnpcidop_urID" msprop:Generator_ColumnPropNameInRow="pcidop_urID" msprop:Generator_ColumnPropNameInTable="pcidop_urIDColumn" msprop:Generator_UserColumnName="pcidop_urID" type="xs:string" minOccurs="0" />
+              <xs:element name="pcidopJobNameIdLv1" msprop:Generator_ColumnVarNameInTable="columnpcidopJobNameIdLv1" msprop:Generator_ColumnPropNameInRow="pcidopJobNameIdLv1" msprop:Generator_ColumnPropNameInTable="pcidopJobNameIdLv1Column" msprop:Generator_UserColumnName="pcidopJobNameIdLv1" type="xs:string" minOccurs="0" />
+              <xs:element name="pcidopJobNameIdLv2" msprop:Generator_ColumnVarNameInTable="columnpcidopJobNameIdLv2" msprop:Generator_ColumnPropNameInRow="pcidopJobNameIdLv2" msprop:Generator_ColumnPropNameInTable="pcidopJobNameIdLv2Column" msprop:Generator_UserColumnName="pcidopJobNameIdLv2" type="xs:string" minOccurs="0" />
+              <xs:element name="pcidopContent" msprop:Generator_ColumnVarNameInTable="columnpcidopContent" msprop:Generator_ColumnPropNameInRow="pcidopContent" msprop:Generator_ColumnPropNameInTable="pcidopContentColumn" msprop:Generator_UserColumnName="pcidopContent" type="xs:string" minOccurs="0" />
+              <xs:element name="pcidopDateTime" msprop:Generator_ColumnVarNameInTable="columnpcidopDateTime" msprop:Generator_ColumnPropNameInRow="pcidopDateTime" msprop:Generator_ColumnPropNameInTable="pcidopDateTimeColumn" msprop:Generator_UserColumnName="pcidopDateTime" type="xs:string" minOccurs="0" />
+              <xs:element name="pcidopIsDvir" msprop:Generator_ColumnVarNameInTable="columnpcidopIsDvir" msprop:Generator_ColumnPropNameInRow="pcidopIsDvir" msprop:Generator_ColumnPropNameInTable="pcidopIsDvirColumn" msprop:Generator_UserColumnName="pcidopIsDvir" type="xs:string" minOccurs="0" />
+              <xs:element name="urNum" msprop:Generator_ColumnVarNameInTable="columnurNum" msprop:Generator_ColumnPropNameInRow="urNum" msprop:Generator_ColumnPropNameInTable="urNumColumn" msprop:Generator_UserColumnName="urNum" type="xs:string" minOccurs="0" />
+              <xs:element name="urName" msprop:Generator_ColumnVarNameInTable="columnurName" msprop:Generator_ColumnPropNameInRow="urName" msprop:Generator_ColumnPropNameInTable="urNameColumn" msprop:Generator_UserColumnName="urName" type="xs:string" minOccurs="0" />
+              <xs:element name="urStaffNum" msprop:Generator_ColumnVarNameInTable="columnurStaffNum" msprop:Generator_ColumnPropNameInRow="urStaffNum" msprop:Generator_ColumnPropNameInTable="urStaffNumColumn" msprop:Generator_UserColumnName="urStaffNum" type="xs:string" minOccurs="0" />
+              <xs:element name="urDept" msprop:Generator_ColumnVarNameInTable="columnurDept" msprop:Generator_ColumnPropNameInRow="urDept" msprop:Generator_ColumnPropNameInTable="urDeptColumn" msprop:Generator_UserColumnName="urDept" type="xs:string" minOccurs="0" />
+              <xs:element name="urDuty" msprop:Generator_ColumnVarNameInTable="columnurDuty" msprop:Generator_ColumnPropNameInRow="urDuty" msprop:Generator_ColumnPropNameInTable="urDutyColumn" msprop:Generator_UserColumnName="urDuty" type="xs:string" minOccurs="0" />
+              <xs:element name="urUnitCode" msprop:Generator_ColumnVarNameInTable="columnurUnitCode" msprop:Generator_ColumnPropNameInRow="urUnitCode" msprop:Generator_ColumnPropNameInTable="urUnitCodeColumn" msprop:Generator_UserColumnName="urUnitCode" type="xs:string" minOccurs="0" />
+              <xs:element name="vchar_WorkProcess_L1_Text" msprop:Generator_ColumnVarNameInTable="columnvchar_WorkProcess_L1_Text" msprop:Generator_ColumnPropNameInRow="vchar_WorkProcess_L1_Text" msprop:Generator_ColumnPropNameInTable="vchar_WorkProcess_L1_TextColumn" msprop:Generator_UserColumnName="vchar_WorkProcess_L1_Text" type="xs:string" minOccurs="0" />
+              <xs:element name="vchar_WorkProcess_L2_Text" msprop:Generator_ColumnVarNameInTable="columnvchar_WorkProcess_L2_Text" msprop:Generator_ColumnPropNameInRow="vchar_WorkProcess_L2_Text" msprop:Generator_ColumnPropNameInTable="vchar_WorkProcess_L2_TextColumn" msprop:Generator_UserColumnName="vchar_WorkProcess_L2_Text" type="xs:string" minOccurs="0" />
+              <xs:element name="CCTV_workstation_id" msprop:Generator_ColumnVarNameInTable="columnCCTV_workstation_id" msprop:Generator_ColumnPropNameInRow="CCTV_workstation_id" msprop:Generator_ColumnPropNameInTable="CCTV_workstation_idColumn" msprop:Generator_UserColumnName="CCTV_workstation_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

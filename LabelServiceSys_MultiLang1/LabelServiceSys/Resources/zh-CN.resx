@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Default_Html_btnOperationLog_Hawb" xml:space="preserve">
+    <value>分 单 号 日 志 表</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_HU" xml:space="preserve">
+    <value>袋 号 日 志 表</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_Login" xml:space="preserve">
+    <value>登 陆 登 出 日 志</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_Other" xml:space="preserve">
+    <value>其 他 日 志 信 息</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_Pcid" xml:space="preserve">
+    <value>件 号 日 志 表</value>
+  </data>
+  <data name="Default_Html_btnUserManagement" xml:space="preserve">
+    <value>用 户 信 息 管 理</value>
+  </data>
+  <data name="Default_Html_CurrentUser" xml:space="preserve">
+    <value>当前登录</value>
+  </data>
+  <data name="Default_Html_Exit" xml:space="preserve">
+    <value>注销</value>
+  </data>
+  <data name="Default_Html_LeftNavigation_Title" xml:space="preserve">
+    <value>后台工作区</value>
+  </data>
+  <data name="Default_Html_mm_exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Default_Html_mm_tabclose" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseall" xml:space="preserve">
+    <value>全部关闭</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseleft" xml:space="preserve">
+    <value>当前页左侧全部关闭</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseother" xml:space="preserve">
+    <value>关闭其他</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseright" xml:space="preserve">
+    <value>当前页右侧全部关闭</value>
+  </data>
+  <data name="Default_Html_mm_tabupdate" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Default_Html_tab_Content_1" xml:space="preserve">
+    <value>使用指南</value>
+  </data>
+  <data name="Default_Html_Title" xml:space="preserve">
+    <value>绩效考核系统</value>
+  </data>
+  <data name="Default_JS_defaultTabTitle" xml:space="preserve">
+    <value>使用指南</value>
+  </data>
+  <data name="Public_Dialog_AskForExit" xml:space="preserve">
+    <value>您确定需要注销吗？</value>
+  </data>
+  <data name="Public_Dialog_Title" xml:space="preserve">
+    <value>提示信息</value>
+  </data>
+  <data name="Public_Dialog_ButtonOfClose" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Public_Dialog_ButtonOfPrint" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="Public_Dialog_ButtonOfSave" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Public_Dialog_NoDataForExcel" xml:space="preserve">
+    <value>没有数据，不可导出</value>
+  </data>
+  <data name="Public_Dialog_NoDataForPrint" xml:space="preserve">
+    <value>没有数据，不可打印</value>
+  </data>
+  <data name="Public_Dialog_NoDataSelectForPrint" xml:space="preserve">
+    <value>请选择需要打印的数据</value>
+  </data>
+  <data name="Public_LogType_1" xml:space="preserve">
+    <value>作业扫描日志</value>
+  </data>
+  <data name="Public_LogType_2" xml:space="preserve">
+    <value>登录日志</value>
+  </data>
+  <data name="Public_LogType_3" xml:space="preserve">
+    <value>登出日志</value>
+  </data>
+  <data name="Public_Message_OK" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="Public_Select_DefaultItem" xml:space="preserve">
+    <value>---请选择---</value>
+  </data>
+  <data name="Public_Select_Sex_Man" xml:space="preserve">
+    <value>男</value>
+  </data>
+  <data name="Public_Select_Sex_Woman" xml:space="preserve">
+    <value>女</value>
+  </data>
+  <data name="User_Controller_ErrorMessage1" xml:space="preserve">
+    <value>此用户号已经使用</value>
+  </data>
+  <data name="User_Controller_ErrorMessage2" xml:space="preserve">
+    <value>删除用户信息失败，原因</value>
+  </data>
+  <data name="User_Controller_ErrorMessage3" xml:space="preserve">
+    <value>删除用户信息成功</value>
+  </data>
+  <data name="User_Controller_ErrorMessage4" xml:space="preserve">
+    <value>删除用户信息失败</value>
+  </data>
+  <data name="User_Controller_ExcelName" xml:space="preserve">
+    <value>系统用户信息</value>
+  </data>
+  <data name="User_Dialog_AddUser_Title" xml:space="preserve">
+    <value>添加系统用户信息</value>
+  </data>
+  <data name="User_Dialog_UpdateUser_Title" xml:space="preserve">
+    <value>修改系统用户信息</value>
+  </data>
+  <data name="User_Html_Title" xml:space="preserve">
+    <value>系统用户信息管理</value>
+  </data>
+  <data name="User_JS_DG_Field1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="User_JS_DG_Field2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="User_JS_DG_Field3" xml:space="preserve">
+    <value>性别</value>
+  </data>
+  <data name="User_JS_DG_Field4" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="User_JS_DG_Field5" xml:space="preserve">
+    <value>员工工号</value>
+  </data>
+  <data name="User_JS_DG_Field6" xml:space="preserve">
+    <value>员工部门</value>
+  </data>
+  <data name="User_JS_DG_Field7" xml:space="preserve">
+    <value>员工职位</value>
+  </data>
+  <data name="User_JS_DG_Field8" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="User_JS_DG_Field9" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="User_JS_DG_Tool1" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="User_JS_DG_Tool2" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="User_JS_DG_Tool3" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="User_JS_DG_Tool4" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="User_JS_DG_Tool5" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="User_JS_DG_Tool6" xml:space="preserve">
+    <value>反选</value>
+  </data>
+  <data name="User_JS_DG_Tool7" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="User_JS_DG_Tool8" xml:space="preserve">
+    <value>打印条码</value>
+  </data>
+  <data name="User_JS_DG_Tool9" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="User_JS_ErrorMessage1" xml:space="preserve">
+    <value>请填写完整信息&lt;br/&gt;(用户号、密码、确认密码、口岸)</value>
+  </data>
+  <data name="User_JS_ErrorMessage2" xml:space="preserve">
+    <value>密码与确认密码不一致</value>
+  </data>
+  <data name="User_JS_ErrorMessage3" xml:space="preserve">
+    <value>用户名最大长度为10,且为字母或数字或其组合</value>
+  </data>
+  <data name="User_JS_ErrorMessage4" xml:space="preserve">
+    <value>&lt;center&gt;请选择数据进行修改(只可选择一行)&lt;/center&gt;</value>
+  </data>
+  <data name="User_JS_ErrorMessage5" xml:space="preserve">
+    <value>您确定需要删除所选的系统用户信息吗</value>
+  </data>
+  <data name="User_JS_ErrorMessage6" xml:space="preserve">
+    <value>&lt;center&gt;请选择需要删除的数据&lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Hawb_Controller_ExcelName" xml:space="preserve">
+    <value>分单号日志信息</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnDele" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnExcel" xml:space="preserve">
+    <value>导出(Excel)</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnInverseSele" xml:space="preserve">
+    <value>反选</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnPrint" xml:space="preserve">
+    <value>打印(PDF)</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnQuery" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnSeleAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_Label1" xml:space="preserve">
+    <value>操作日期</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_Label2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_menuButtonReport" xml:space="preserve">
+    <value>报表</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_Title" xml:space="preserve">
+    <value>分单号日志信息管理</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_ErrorMessage1" xml:space="preserve">
+    <value>您确定需要删除所选的操作日志信息吗？</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt;请选择需要删除的数据&lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field3" xml:space="preserve">
+    <value>一级工作流程</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field4" xml:space="preserve">
+    <value>二级工作流程</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field5" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field6" xml:space="preserve">
+    <value>操作时间</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field7" xml:space="preserve">
+    <value>操作内容</value>
+  </data>
+  <data name="Public_Controller_ErrorMessage1" xml:space="preserve">
+    <value>删除日志失败，原因</value>
+  </data>
+  <data name="Public_Controller_ErrorMessage2" xml:space="preserve">
+    <value>删除日志成功</value>
+  </data>
+  <data name="Public_Controller_ErrorMessage3" xml:space="preserve">
+    <value>删除日志失败</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ErrorMessage1" xml:space="preserve">
+    <value>删除日志失败，原因</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ErrorMessage2" xml:space="preserve">
+    <value>删除日志成功</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ErrorMessage3" xml:space="preserve">
+    <value>删除日志失败</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ExcelName" xml:space="preserve">
+    <value>袋号日志信息</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnDele" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnExcel" xml:space="preserve">
+    <value>导出(Excel)</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnInverseSele" xml:space="preserve">
+    <value>反选</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnPrint" xml:space="preserve">
+    <value>打印(PDF)</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnQuery" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnSeleAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="OperationLog_HU_Html_Label1" xml:space="preserve">
+    <value>操作日期</value>
+  </data>
+  <data name="OperationLog_HU_Html_Label2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_HU_Html_menuButtonReport" xml:space="preserve">
+    <value>报表</value>
+  </data>
+  <data name="OperationLog_HU_JS_ErrorMessage1" xml:space="preserve">
+    <value>您确定需要删除所选的操作日志信息吗？</value>
+  </data>
+  <data name="OperationLog_HU_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt;请选择需要删除的数据&lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field3" xml:space="preserve">
+    <value>一级工作流程</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field4" xml:space="preserve">
+    <value>二级工作流程</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field5" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field6" xml:space="preserve">
+    <value>操作时间</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field7" xml:space="preserve">
+    <value>操作内容</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnDele" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnExcel" xml:space="preserve">
+    <value>导出(Excel)</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnInverseSele" xml:space="preserve">
+    <value>反选</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnPrint" xml:space="preserve">
+    <value>打印(PDF)</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnQuery" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnSeleAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="OperationLog_Login_Html_Label1" xml:space="preserve">
+    <value>操作日期</value>
+  </data>
+  <data name="OperationLog_Login_Html_Label2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Login_Html_menuButtonReport" xml:space="preserve">
+    <value>报表</value>
+  </data>
+  <data name="OperationLog_Login_Html_Title" xml:space="preserve">
+    <value>登入登出日志</value>
+  </data>
+  <data name="OperationLog_Login_JS_ErrorMessage1" xml:space="preserve">
+    <value>您确定需要删除所选的操作日志信息吗？</value>
+  </data>
+  <data name="OperationLog_Login_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt;请选择需要删除的数据&lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field3" xml:space="preserve">
+    <value>一级工作流程</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field4" xml:space="preserve">
+    <value>二级工作流程</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field5" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field6" xml:space="preserve">
+    <value>操作时间</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field7" xml:space="preserve">
+    <value>操作内容</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ErrorMessage1" xml:space="preserve">
+    <value>删除日志失败，原因</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ErrorMessage2" xml:space="preserve">
+    <value>删除日志成功</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ErrorMessage3" xml:space="preserve">
+    <value>删除日志失败</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ExcelName" xml:space="preserve">
+    <value>其他日志信息</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnDele" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnExcel" xml:space="preserve">
+    <value>导出(Excel)</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnInverseSele" xml:space="preserve">
+    <value>反选</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnPrint" xml:space="preserve">
+    <value>打印(PDF)</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnQuery" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnSeleAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="OperationLog_Other_Html_Label1" xml:space="preserve">
+    <value>操作日期</value>
+  </data>
+  <data name="OperationLog_Other_Html_Label2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Other_Html_menuButtonReport" xml:space="preserve">
+    <value>报表</value>
+  </data>
+  <data name="OperationLog_Other_Html_Title" xml:space="preserve">
+    <value>其他日志信息</value>
+  </data>
+  <data name="OperationLog_Other_JS_ErrorMessage1" xml:space="preserve">
+    <value>您确定需要删除所选的操作日志信息吗？</value>
+  </data>
+  <data name="OperationLog_Other_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt;请选择需要删除的数据&lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field3" xml:space="preserve">
+    <value>一级工作流程</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field4" xml:space="preserve">
+    <value>二级工作流程</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field5" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field6" xml:space="preserve">
+    <value>操作时间</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field7" xml:space="preserve">
+    <value>操作内容</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ErrorMessage1" xml:space="preserve">
+    <value>删除日志失败，原因</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ErrorMessage2" xml:space="preserve">
+    <value>删除日志成功</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ErrorMessage3" xml:space="preserve">
+    <value>删除日志失败</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ExcelName" xml:space="preserve">
+    <value>件号日志信息</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnDele" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnExcel" xml:space="preserve">
+    <value>导出(Excel)</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnInverseSele" xml:space="preserve">
+    <value>反选</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnPrint" xml:space="preserve">
+    <value>打印(PDF)</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnQuery" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnSeleAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_Label1" xml:space="preserve">
+    <value>操作日期</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_Label2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_menuButtonReport" xml:space="preserve">
+    <value>报表</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_Title" xml:space="preserve">
+    <value>分单号日志信息管理</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_ErrorMessage1" xml:space="preserve">
+    <value>您确定需要删除所选的操作日志信息吗？</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt;请选择需要删除的数据&lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field2" xml:space="preserve">
+    <value>用户姓名</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field3" xml:space="preserve">
+    <value>一级工作流程</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field4" xml:space="preserve">
+    <value>二级工作流程</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field5" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field6" xml:space="preserve">
+    <value>操作时间</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field7" xml:space="preserve">
+    <value>操作内容</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage1" xml:space="preserve">
+    <value>未指定设备类型</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage2" xml:space="preserve">
+    <value>未指定是否有DVIR</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage3" xml:space="preserve">
+    <value>未指定用户名</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage4" xml:space="preserve">
+    <value>解绑失败,原因</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage5" xml:space="preserve">
+    <value>解绑成功,转入绑定页可重新绑定</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage6" xml:space="preserve">
+    <value>绑定失败,原因</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage7" xml:space="preserve">
+    <value>绑定成功,查看绑定信息</value>
+  </data>
+  <data name="LoginCenter_Controller_IsDVIRDesc_No" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="LoginCenter_Controller_IsDVIRDesc_Yes" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="LoginCenter_Controller_UnBindError" xml:space="preserve">
+    <value>解绑失败</value>
+  </data>
+  <data name="LoginCenter_Html_Index_btnLoginOut" xml:space="preserve">
+    <value>解绑</value>
+  </data>
+  <data name="LoginCenter_Html_Index_HasDVIR" xml:space="preserve">
+    <value>有无DVIR</value>
+  </data>
+  <data name="LoginCenter_Html_Index_JobContent1" xml:space="preserve">
+    <value>一级工作内容</value>
+  </data>
+  <data name="LoginCenter_Html_Index_JobContent2" xml:space="preserve">
+    <value>二级工作内容</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_btnLogin" xml:space="preserve">
+    <value>绑定</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_HasDVIR" xml:space="preserve">
+    <value>有无DVIR</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_JobContent1" xml:space="preserve">
+    <value>一级工作内容</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_JobContent2" xml:space="preserve">
+    <value>二级工作内容</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_Title" xml:space="preserve">
+    <value>绑定</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_UserName" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Title" xml:space="preserve">
+    <value>登录信息</value>
+  </data>
+  <data name="LoginCenter_Html_Index_UserName" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="LoginCenter_JS_Login_ErrorMessage1" xml:space="preserve">
+    <value>请选择一级工作内容</value>
+  </data>
+  <data name="LoginCenter_JS_Login_ErrorMessage2" xml:space="preserve">
+    <value>请选择二级工作内容</value>
+  </data>
+  <data name="Error_Html_Label1" xml:space="preserve">
+    <value>错误原因</value>
+  </data>
+  <data name="Error_Html_Label2" xml:space="preserve">
+    <value>返回登录页</value>
+  </data>
+  <data name="Error_Html_Title" xml:space="preserve">
+    <value>出错啦！！！</value>
+  </data>
+  <data name="Monitor_Controller_ErrorMessage1" xml:space="preserve">
+    <value>处理失败,原因</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage1" xml:space="preserve">
+    <value>未知条码处理成功</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage2" xml:space="preserve">
+    <value>分单号处理成功</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage3" xml:space="preserve">
+    <value>件号处理成功</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage4" xml:space="preserve">
+    <value>袋号处理成功</value>
+  </data>
+  <data name="User_Html_Create_Label1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="User_Html_Create_Label10" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="User_Html_Create_Label11" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="User_Html_Create_Label2" xml:space="preserve">
+    <value>用户密码</value>
+  </data>
+  <data name="User_Html_Create_Label3" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="User_Html_Create_Label4" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="User_Html_Create_Label5" xml:space="preserve">
+    <value>性别</value>
+  </data>
+  <data name="User_Html_Create_Label6" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="User_Html_Create_Label7" xml:space="preserve">
+    <value>员工工号</value>
+  </data>
+  <data name="User_Html_Create_Label8" xml:space="preserve">
+    <value>用户部门</value>
+  </data>
+  <data name="User_Html_Create_Label9" xml:space="preserve">
+    <value>用户职位</value>
+  </data>
+  <data name="User_Html_Edit_Label1" xml:space="preserve">
+    <value>用户号</value>
+  </data>
+  <data name="User_Html_Edit_Label10" xml:space="preserve">
+    <value>口岸代码</value>
+  </data>
+  <data name="User_Html_Edit_Label11" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="User_Html_Edit_Label2" xml:space="preserve">
+    <value>用户密码</value>
+  </data>
+  <data name="User_Html_Edit_Label3" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="User_Html_Edit_Label4" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="User_Html_Edit_Label5" xml:space="preserve">
+    <value>性别</value>
+  </data>
+  <data name="User_Html_Edit_Label6" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="User_Html_Edit_Label7" xml:space="preserve">
+    <value>员工工号</value>
+  </data>
+  <data name="User_Html_Edit_Label8" xml:space="preserve">
+    <value>用户部门</value>
+  </data>
+  <data name="User_Html_Edit_Label9" xml:space="preserve">
+    <value>用户职位</value>
+  </data>
+</root>

@@ -1,0 +1,65 @@
+        '子运单：=10位，纯数字，且前9位 模 7 等于 第10位 
+
+        '件号：>=21位，有以下多种格式
+        ''(J)JD
+        '(1J)JD
+        '...
+        '(99J)JD
+        '(00)JD
+
+        '袋号：=10位，第1位是“H”后9位纯数字，且2到9位 模 7 等于 第10位
+
+
+    Private Function DecodeDHLBarcode(ByVal Barcode As String) As Integer
+        If Barcode.Length >= 10 Then
+            If Barcode.Length = 10 Or (Barcode.Length >= 21 And (Barcode.Substring(1, 2) = "JD" Or Barcode.Substring(2, 2) = "JD" Or Barcode.Substring(3, 2) = "JD" Or Barcode.Substring(2, 2) = "JD")) Then
+                If Barcode.Length = 10 Then
+                    If IsNumeric(Barcode) Then
+                        Dim intbc_1to9 As Integer = Integer.Parse(Barcode.Substring(0, 9))
+                        Dim intbc_10 As Integer = Integer.Parse(Barcode.Substring(9, 1))
+                        If intbc_1to9 Mod 7 = intbc_10 Then
+                            Return 1    'DHL子运单
+
+                        Else
+                            Return 0
+                        End If
+
+                    Else
+                        Dim firstchar As String = Barcode.Substring(0, 1)
+                        Dim otherchar As String = Barcode.Substring(1, 9)
+                        Dim otherchar_2to9 As String = Barcode.Substring(1, 8)
+                        Dim otherchar_10 As String = Barcode.Substring(9, 1)
+
+                        If firstchar = "H" Then
+                            If IsNumeric(otherchar) Then
+                                Dim intotherchar_2to9 As Integer = Integer.Parse(otherchar_2to9)
+                                Dim intotherchar_10 As Integer = Integer.Parse(otherchar_10)
+                                If intotherchar_2to9 Mod 7 = intotherchar_10 Then
+                                    Return 3    'DHL 袋号 条码
+                                Else
+                                    Return 0
+                                End If
+
+                            Else
+                                Return 0
+                            End If
+
+                        Else
+                            Return 0
+                        End If
+
+                    End If
+
+                Else
+                    Return 2    'DHL Piece号条码
+                End If
+
+            Else
+                Return 0
+            End If
+
+        Else
+            Return 0
+        End If
+
+    End Function

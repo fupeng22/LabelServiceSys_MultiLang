@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Default_Html_btnOperationLog_Hawb" xml:space="preserve">
+    <value>Branch number log table</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_HU" xml:space="preserve">
+    <value>Bag number log table</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_Login" xml:space="preserve">
+    <value>Login or Logout table</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_Other" xml:space="preserve">
+    <value>Other log table</value>
+  </data>
+  <data name="Default_Html_btnOperationLog_Pcid" xml:space="preserve">
+    <value>Part No. log table</value>
+  </data>
+  <data name="Default_Html_btnUserManagement" xml:space="preserve">
+    <value>The user information management</value>
+  </data>
+  <data name="Default_Html_CurrentUser" xml:space="preserve">
+    <value>The current user</value>
+  </data>
+  <data name="Default_Html_Exit" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Default_Html_LeftNavigation_Title" xml:space="preserve">
+    <value>Workstation</value>
+  </data>
+  <data name="Default_Html_mm_exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Default_Html_mm_tabclose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseall" xml:space="preserve">
+    <value>Close all</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseleft" xml:space="preserve">
+    <value>The current page left all off</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseother" xml:space="preserve">
+    <value>Close other</value>
+  </data>
+  <data name="Default_Html_mm_tabcloseright" xml:space="preserve">
+    <value>The current page right all off</value>
+  </data>
+  <data name="Default_Html_mm_tabupdate" xml:space="preserve">
+    <value>Refeash</value>
+  </data>
+  <data name="Default_Html_tab_Content_1" xml:space="preserve">
+    <value>Guide of user</value>
+  </data>
+  <data name="Default_Html_Title" xml:space="preserve">
+    <value>Performance appraisal system</value>
+  </data>
+  <data name="Default_JS_defaultTabTitle" xml:space="preserve">
+    <value>Guide of user</value>
+  </data>
+  <data name="Error_Html_Label1" xml:space="preserve">
+    <value>The cause of the error</value>
+  </data>
+  <data name="Error_Html_Label2" xml:space="preserve">
+    <value>Returns the login page</value>
+  </data>
+  <data name="Error_Html_Title" xml:space="preserve">
+    <value>Wrong!!!</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage1" xml:space="preserve">
+    <value>The device type is not specified</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage2" xml:space="preserve">
+    <value>Do not specify whether DVIR</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage3" xml:space="preserve">
+    <value>The user name not specified</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage4" xml:space="preserve">
+    <value>Unbundling failed, reason</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage5" xml:space="preserve">
+    <value>Unbundling success, to bind pages can rebind</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage6" xml:space="preserve">
+    <value>Bind failed, reason</value>
+  </data>
+  <data name="LoginCenter_Controller_ErrorMessage7" xml:space="preserve">
+    <value>Binding  successfully,view bind infomation</value>
+  </data>
+  <data name="LoginCenter_Controller_IsDVIRDesc_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="LoginCenter_Controller_IsDVIRDesc_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="LoginCenter_Controller_UnBindError" xml:space="preserve">
+    <value>Unbundling failure</value>
+  </data>
+  <data name="LoginCenter_Html_Index_btnLoginOut" xml:space="preserve">
+    <value>Unbundling</value>
+  </data>
+  <data name="LoginCenter_Html_Index_HasDVIR" xml:space="preserve">
+    <value>Whether has DVIR</value>
+  </data>
+  <data name="LoginCenter_Html_Index_JobContent1" xml:space="preserve">
+    <value>Job content1</value>
+  </data>
+  <data name="LoginCenter_Html_Index_JobContent2" xml:space="preserve">
+    <value>Job content2</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_btnLogin" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_HasDVIR" xml:space="preserve">
+    <value>Whether has DVIR</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_JobContent1" xml:space="preserve">
+    <value>Job content1</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_JobContent2" xml:space="preserve">
+    <value>Job content2</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_Title" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Login_UserName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="LoginCenter_Html_Index_Title" xml:space="preserve">
+    <value>Login information</value>
+  </data>
+  <data name="LoginCenter_Html_Index_UserName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="LoginCenter_JS_Login_ErrorMessage1" xml:space="preserve">
+    <value>Please select job content1</value>
+  </data>
+  <data name="LoginCenter_JS_Login_ErrorMessage2" xml:space="preserve">
+    <value>Please select job content2</value>
+  </data>
+  <data name="Monitor_Controller_ErrorMessage1" xml:space="preserve">
+    <value>Handle failure, reason</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage1" xml:space="preserve">
+    <value>Unknown barcode handle success</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage2" xml:space="preserve">
+    <value>Division number handle success</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage3" xml:space="preserve">
+    <value>Part No. handle success</value>
+  </data>
+  <data name="Monitor_Controller_SuccessMessage4" xml:space="preserve">
+    <value>Bag number handle success</value>
+  </data>
+  <data name="OperationLog_Hawb_Controller_ExcelName" xml:space="preserve">
+    <value>Divide the number of log information</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnDele" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnExcel" xml:space="preserve">
+    <value>Export(Excel)</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnInverseSele" xml:space="preserve">
+    <value>Reverse select</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnPrint" xml:space="preserve">
+    <value>Print(PDF)</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnQuery" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_btnSeleAll" xml:space="preserve">
+    <value>All select</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_Label1" xml:space="preserve">
+    <value>Date of operation</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_Label2" xml:space="preserve">
+    <value>The user name</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_menuButtonReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="OperationLog_Hawb_Html_Title" xml:space="preserve">
+    <value>Branch number of log infomation</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_ErrorMessage1" xml:space="preserve">
+    <value>Are you sure the log information to delete the selected?</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt; select the need to delete the data &lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field3" xml:space="preserve">
+    <value>Job content1</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field4" xml:space="preserve">
+    <value>job content2</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field5" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field6" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="OperationLog_Hawb_JS_Field7" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ErrorMessage1" xml:space="preserve">
+    <value>Delete log failed, reason</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ErrorMessage2" xml:space="preserve">
+    <value>Delete log success</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ErrorMessage3" xml:space="preserve">
+    <value>Delete the log failure</value>
+  </data>
+  <data name="OperationLog_HU_Controller_ExcelName" xml:space="preserve">
+    <value>Bag number log information</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnDele" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnExcel" xml:space="preserve">
+    <value>Export(Excel)</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnInverseSele" xml:space="preserve">
+    <value>Reverse select</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnPrint" xml:space="preserve">
+    <value>Print(PDF)</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnQuery" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="OperationLog_HU_Html_btnSeleAll" xml:space="preserve">
+    <value>All select</value>
+  </data>
+  <data name="OperationLog_HU_Html_Label1" xml:space="preserve">
+    <value>Date of operation</value>
+  </data>
+  <data name="OperationLog_HU_Html_Label2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_HU_Html_menuButtonReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="OperationLog_HU_JS_ErrorMessage1" xml:space="preserve">
+    <value>Are you sure the log information to delete the selected?</value>
+  </data>
+  <data name="OperationLog_HU_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt; select the need to delete the data &lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field3" xml:space="preserve">
+    <value>Job content1</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field4" xml:space="preserve">
+    <value>Job content2</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field5" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field6" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="OperationLog_HU_JS_Field7" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnDele" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnExcel" xml:space="preserve">
+    <value>Export(Excel)</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnInverseSele" xml:space="preserve">
+    <value>Reverse select</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnPrint" xml:space="preserve">
+    <value>Print(PDF)</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnQuery" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="OperationLog_Login_Html_btnSeleAll" xml:space="preserve">
+    <value>All select</value>
+  </data>
+  <data name="OperationLog_Login_Html_Label1" xml:space="preserve">
+    <value>Date of operation</value>
+  </data>
+  <data name="OperationLog_Login_Html_Label2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_Login_Html_menuButtonReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="OperationLog_Login_Html_Title" xml:space="preserve">
+    <value>Login logout log</value>
+  </data>
+  <data name="OperationLog_Login_JS_ErrorMessage1" xml:space="preserve">
+    <value>Are you sure the log information to delete the selected?</value>
+  </data>
+  <data name="OperationLog_Login_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt; select the need to delete the data &lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field3" xml:space="preserve">
+    <value>Job content1</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field4" xml:space="preserve">
+    <value>Job content2</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field5" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field6" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="OperationLog_Login_JS_Field7" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ErrorMessage1" xml:space="preserve">
+    <value>Delete log failed, reason</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ErrorMessage2" xml:space="preserve">
+    <value>Delete log success</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ErrorMessage3" xml:space="preserve">
+    <value>Delete the log failure</value>
+  </data>
+  <data name="OperationLog_Other_Controller_ExcelName" xml:space="preserve">
+    <value>Other log information</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnDele" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnExcel" xml:space="preserve">
+    <value>Export(Excel)</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnInverseSele" xml:space="preserve">
+    <value>Reverse select</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnPrint" xml:space="preserve">
+    <value>Print(PDF)</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnQuery" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="OperationLog_Other_Html_btnSeleAll" xml:space="preserve">
+    <value>All select</value>
+  </data>
+  <data name="OperationLog_Other_Html_Label1" xml:space="preserve">
+    <value>Date of operation</value>
+  </data>
+  <data name="OperationLog_Other_Html_Label2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_Other_Html_menuButtonReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="OperationLog_Other_Html_Title" xml:space="preserve">
+    <value>Other log information</value>
+  </data>
+  <data name="OperationLog_Other_JS_ErrorMessage1" xml:space="preserve">
+    <value>Are you sure the log information to delete the selected?</value>
+  </data>
+  <data name="OperationLog_Other_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt; select the need to delete the data &lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field3" xml:space="preserve">
+    <value>Job content1</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field4" xml:space="preserve">
+    <value>Job content2</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field5" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field6" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="OperationLog_Other_JS_Field7" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ErrorMessage1" xml:space="preserve">
+    <value>Delete log failed, reason</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ErrorMessage2" xml:space="preserve">
+    <value>Delete log success</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ErrorMessage3" xml:space="preserve">
+    <value>Delete the log failure</value>
+  </data>
+  <data name="OperationLog_Pcid_Controller_ExcelName" xml:space="preserve">
+    <value>Number of the log information</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnDele" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnExcel" xml:space="preserve">
+    <value>Export(Excel)</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnInverseSele" xml:space="preserve">
+    <value>Reverse select</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnPrint" xml:space="preserve">
+    <value>Print(PDF)</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnQuery" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_btnSeleAll" xml:space="preserve">
+    <value>All select</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_Label1" xml:space="preserve">
+    <value>Date of operation</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_Label2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_menuButtonReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="OperationLog_Pcid_Html_Title" xml:space="preserve">
+    <value>Divide the number of log information management</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_ErrorMessage1" xml:space="preserve">
+    <value>Are you sure the log information to delete the selected?</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_ErrorMessage2" xml:space="preserve">
+    <value>&lt;center&gt; select the need to delete the data &lt;/center&gt;</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field3" xml:space="preserve">
+    <value>Job content1</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field4" xml:space="preserve">
+    <value>Job content2</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field5" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field6" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="OperationLog_Pcid_JS_Field7" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Public_Controller_ErrorMessage1" xml:space="preserve">
+    <value>Delete log failed, reason</value>
+  </data>
+  <data name="Public_Controller_ErrorMessage2" xml:space="preserve">
+    <value>Delete log success</value>
+  </data>
+  <data name="Public_Controller_ErrorMessage3" xml:space="preserve">
+    <value>Delete the log failure</value>
+  </data>
+  <data name="Public_Dialog_AskForExit" xml:space="preserve">
+    <value>Are you sure to logout?</value>
+  </data>
+  <data name="Public_Dialog_ButtonOfClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Public_Dialog_ButtonOfPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Public_Dialog_ButtonOfSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Public_Dialog_NoDataForExcel" xml:space="preserve">
+    <value>No data, can not be export</value>
+  </data>
+  <data name="Public_Dialog_NoDataForPrint" xml:space="preserve">
+    <value>No data, can not to print</value>
+  </data>
+  <data name="Public_Dialog_NoDataSelectForPrint" xml:space="preserve">
+    <value>Please select the data to print</value>
+  </data>
+  <data name="Public_Dialog_Title" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="Public_LogType_1" xml:space="preserve">
+    <value>Job scan log</value>
+  </data>
+  <data name="Public_LogType_2" xml:space="preserve">
+    <value>Login log</value>
+  </data>
+  <data name="Public_LogType_3" xml:space="preserve">
+    <value>Logout log</value>
+  </data>
+  <data name="Public_Message_OK" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Public_Select_DefaultItem" xml:space="preserve">
+    <value>---Please select---</value>
+  </data>
+  <data name="Public_Select_Sex_Man" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Public_Select_Sex_Woman" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="User_Controller_ErrorMessage1" xml:space="preserve">
+    <value>This user number is already in use</value>
+  </data>
+  <data name="User_Controller_ErrorMessage2" xml:space="preserve">
+    <value>Delete user information failed, reason</value>
+  </data>
+  <data name="User_Controller_ErrorMessage3" xml:space="preserve">
+    <value>Delete user information success</value>
+  </data>
+  <data name="User_Controller_ErrorMessage4" xml:space="preserve">
+    <value>Delete user information failed</value>
+  </data>
+  <data name="User_Controller_ExcelName" xml:space="preserve">
+    <value>The system user information</value>
+  </data>
+  <data name="User_Dialog_AddUser_Title" xml:space="preserve">
+    <value>Add the system user information</value>
+  </data>
+  <data name="User_Dialog_UpdateUser_Title" xml:space="preserve">
+    <value>Modify the system user information</value>
+  </data>
+  <data name="User_Html_Title" xml:space="preserve">
+    <value>The system user information management</value>
+  </data>
+  <data name="User_JS_DG_Field1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="User_JS_DG_Field2" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="User_JS_DG_Field3" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="User_JS_DG_Field4" xml:space="preserve">
+    <value>Old</value>
+  </data>
+  <data name="User_JS_DG_Field5" xml:space="preserve">
+    <value>Staff number</value>
+  </data>
+  <data name="User_JS_DG_Field6" xml:space="preserve">
+    <value>Staff departments</value>
+  </data>
+  <data name="User_JS_DG_Field7" xml:space="preserve">
+    <value>Staff positions</value>
+  </data>
+  <data name="User_JS_DG_Field8" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="User_JS_DG_Field9" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="User_JS_DG_Tool1" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="User_JS_DG_Tool2" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="User_JS_DG_Tool3" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="User_JS_DG_Tool4" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="User_JS_DG_Tool5" xml:space="preserve">
+    <value>All select</value>
+  </data>
+  <data name="User_JS_DG_Tool6" xml:space="preserve">
+    <value>Reverse select</value>
+  </data>
+  <data name="User_JS_DG_Tool7" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="User_JS_DG_Tool8" xml:space="preserve">
+    <value>Print barcode</value>
+  </data>
+  <data name="User_JS_DG_Tool9" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="User_JS_ErrorMessage1" xml:space="preserve">
+    <value>Please complete the information &lt;br/&gt; (user number, password, confirm the password, gate way)</value>
+  </data>
+  <data name="User_JS_ErrorMessage2" xml:space="preserve">
+    <value>The password and confirm password do not match</value>
+  </data>
+  <data name="User_JS_ErrorMessage3" xml:space="preserve">
+    <value>The maximum length of the user name is 10, and is a letter or a number or a combination thereof</value>
+  </data>
+  <data name="User_JS_ErrorMessage4" xml:space="preserve">
+    <value>&lt;center&gt; select modify data (can only select one line) &lt;/center&gt;</value>
+  </data>
+  <data name="User_JS_ErrorMessage5" xml:space="preserve">
+    <value>Are you sure need the system user information to delete the selected it</value>
+  </data>
+  <data name="User_JS_ErrorMessage6" xml:space="preserve">
+    <value>&lt;center&gt; select the need to delete the data &lt;/center&gt;</value>
+  </data>
+  <data name="User_Html_Create_Label1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="User_Html_Create_Label10" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="User_Html_Create_Label11" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="User_Html_Create_Label2" xml:space="preserve">
+    <value>User password</value>
+  </data>
+  <data name="User_Html_Create_Label3" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="User_Html_Create_Label4" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="User_Html_Create_Label5" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="User_Html_Create_Label6" xml:space="preserve">
+    <value>Old</value>
+  </data>
+  <data name="User_Html_Create_Label7" xml:space="preserve">
+    <value>Staff number</value>
+  </data>
+  <data name="User_Html_Create_Label8" xml:space="preserve">
+    <value>Staff department</value>
+  </data>
+  <data name="User_Html_Create_Label9" xml:space="preserve">
+    <value>Staff position</value>
+  </data>
+  <data name="User_Html_Edit_Label1" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="User_Html_Edit_Label10" xml:space="preserve">
+    <value>Gate way</value>
+  </data>
+  <data name="User_Html_Edit_Label11" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="User_Html_Edit_Label2" xml:space="preserve">
+    <value>User password</value>
+  </data>
+  <data name="User_Html_Edit_Label3" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="User_Html_Edit_Label4" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="User_Html_Edit_Label5" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="User_Html_Edit_Label6" xml:space="preserve">
+    <value>Old</value>
+  </data>
+  <data name="User_Html_Edit_Label7" xml:space="preserve">
+    <value>Staff number</value>
+  </data>
+  <data name="User_Html_Edit_Label8" xml:space="preserve">
+    <value>Staff department</value>
+  </data>
+  <data name="User_Html_Edit_Label9" xml:space="preserve">
+    <value>Staff position</value>
+  </data>
+</root>

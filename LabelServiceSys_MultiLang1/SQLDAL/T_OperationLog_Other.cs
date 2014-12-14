@@ -1,0 +1,181 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace SQLDAL
+{
+    public class T_OperationLog_Other
+    {
+        public bool addOperationLog_Other(Model.M_OperationLog_Other model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append(@"INSERT INTO [Better_OperationLog_Other]
+                                   ([otrop_urID]
+                                   ,[otropJobNameIdLv1]
+                                   ,[otropJobNameIdLv2]
+                                   ,[otropContent]
+                                   ,[otropDateTime]
+                                   ,[otropIsDvir])
+                             VALUES
+                                   (@otrop_urID
+                                   ,@otropJobNameIdLv1
+                                   ,@otropJobNameIdLv2
+                                   ,@otropContent
+                                   ,@otropDateTime
+                                   ,@otropIsDvir)");
+
+            SqlParameter[] parameters = {
+                    new SqlParameter("@otrop_urID",SqlDbType.Int),
+                    new SqlParameter("@otropJobNameIdLv1",SqlDbType.NVarChar ),
+                    new SqlParameter("@otropJobNameIdLv2", SqlDbType.NVarChar),
+                    new SqlParameter("@otropContent",SqlDbType.NVarChar),
+                    new SqlParameter("@otropDateTime",SqlDbType.DateTime),
+                    new SqlParameter("@otropIsDvir",SqlDbType.Int)
+            };
+            parameters[0].Value = model.otrop_urID;
+            parameters[1].Value = model.otropJobNameIdLv1;
+            parameters[2].Value = model.otropJobNameIdLv2;
+            parameters[3].Value = model.otropContent;
+            parameters[4].Value = model.otropDateTime;
+            parameters[5].Value = model.otropIsDvir;
+
+            if (DBUtility.SqlServerHelper.ExecuteSql(strSql.ToString(), parameters) >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+
+        }
+
+        public bool updateOperationLog_Other(Model.M_OperationLog_Other model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append(@"UPDATE [Better_OperationLog_Other]
+                               SET [otrop_urID] =@otrop_urID
+                                  ,[otropJobNameIdLv1] =@otropJobNameIdLv1
+                                  ,[otropJobNameIdLv2] =@otropJobNameIdLv2
+                                  ,[otropContent] =@otropContent
+                                  ,[otropDateTime] =@otropDateTime
+                                  ,[otropIsDvir] =@otropIsDvir
+                             WHERE otropID=@otropID");
+
+            SqlParameter[] parameters = {
+                    new SqlParameter("@otrop_urID",SqlDbType.Int),
+                    new SqlParameter("@otropJobNameIdLv1",SqlDbType.NVarChar ),
+                    new SqlParameter("@otropJobNameIdLv2", SqlDbType.NVarChar),
+                    new SqlParameter("@otropContent",SqlDbType.NVarChar),
+                    new SqlParameter("@otropDateTime",SqlDbType.DateTime),
+                    new SqlParameter("@otropIsDvir",SqlDbType.Int),
+                    new SqlParameter("@otropID",SqlDbType.Int)
+            };
+            parameters[0].Value = model.otrop_urID;
+            parameters[1].Value = model.otropJobNameIdLv1;
+            parameters[2].Value = model.otropJobNameIdLv2;
+            parameters[3].Value = model.otropContent;
+            parameters[4].Value = model.otropDateTime;
+            parameters[6].Value = model.otropID;
+
+            if (DBUtility.SqlServerHelper.ExecuteSql(strSql.ToString(), parameters) >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+
+        }
+
+        public bool deleteOperationLog_Other(string opIDs)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from [Better_OperationLog_Other] where otropID in (" + opIDs + ")");
+            if (DBUtility.SqlServerHelper.ExecuteSql(strSql.ToString()) >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool insertOperationLog_OtherFromUsernum(string strUserNum, string data, string isDVIR)
+        {
+            StringBuilder strSql = new StringBuilder();
+
+            DataSet ds = null;
+            DataTable dt = null;
+            ds = DBUtility.SqlServerHelper.Query(string.Format(@"SELECT TOP 1
+                                                        *
+                                                FROM    Better_OperationLog_Login BOL
+                                                        INNER JOIN Better_User BU ON BU.urID = BOL.lgop_urID
+                                                WHERE   BU.urNum = '{0}'
+                                                ORDER BY BOL.lgopDateTime desc", strUserNum));
+            if (ds != null)
+            {
+                dt = ds.Tables[0];
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    switch (dt.Rows[0]["lgopContent"].ToString().ToUpper())
+                    {
+                        case "LOGIN":
+                            strSql.AppendFormat(@"INSERT INTO Better_OperationLog_Other
+                                    ( otrop_urID ,
+                                        otropJobNameIdLv1 ,
+                                        otropJobNameIdLv2 ,
+                                        otropContent ,
+                                        otropDateTime ,
+                                        otropIsDvir
+                                    )
+                                    SELECT TOP 1
+                                            BOL.lgop_urID ,
+                                            BOL.lgopJobNameIdLv1 ,
+                                            BOL.lgopJobNameIdLv2 ,
+                                            '{0}' ,
+                                            GETDATE() ,
+                                            '{1}'
+                                    FROM    Better_OperationLog_Login BOL
+                                            INNER
+                            JOIN ( SELECT TOP 1
+                                            urID
+                                   FROM     Better_User
+                                   WHERE    urNum = '{2}'
+                                 ) T ON T.urID = BOL.lgop_urID
+                                    ORDER BY lgopDateTime DESC", data, isDVIR, strUserNum);
+                            if (DBUtility.SqlServerHelper.ExecuteSql(strSql.ToString()) >= 1)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        case "LOGOUT":
+                            return false;
+                        default:
+                            return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+    }
+}

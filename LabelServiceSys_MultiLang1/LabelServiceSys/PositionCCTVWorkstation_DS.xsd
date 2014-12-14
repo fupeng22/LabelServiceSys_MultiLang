@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PositionCCTVWorkstation_DS" targetNamespace="http://tempuri.org/PositionCCTVWorkstation_DS.xsd" xmlns:mstns="http://tempuri.org/PositionCCTVWorkstation_DS.xsd" xmlns="http://tempuri.org/PositionCCTVWorkstation_DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PositionCCTVWorkstation_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PositionCCTVWorkstation_DS" msprop:Generator_UserDSName="PositionCCTVWorkstation_DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PositionNO" msprop:Generator_ColumnVarNameInTable="columnPositionNO" msprop:Generator_ColumnPropNameInRow="PositionNO" msprop:Generator_ColumnPropNameInTable="PositionNOColumn" msprop:Generator_UserColumnName="PositionNO" type="xs:string" minOccurs="0" />
+              <xs:element name="PositionNO_Des" msprop:Generator_ColumnVarNameInTable="columnPositionNO_Des" msprop:Generator_ColumnPropNameInRow="PositionNO_Des" msprop:Generator_ColumnPropNameInTable="PositionNO_DesColumn" msprop:Generator_UserColumnName="PositionNO_Des" type="xs:string" minOccurs="0" />
+              <xs:element name="CCTV_workstation_id" msprop:Generator_ColumnVarNameInTable="columnCCTV_workstation_id" msprop:Generator_ColumnPropNameInRow="CCTV_workstation_id" msprop:Generator_ColumnPropNameInTable="CCTV_workstation_idColumn" msprop:Generator_UserColumnName="CCTV_workstation_id" type="xs:string" minOccurs="0" />
+              <xs:element name="PId" msprop:Generator_ColumnVarNameInTable="columnPId" msprop:Generator_ColumnPropNameInRow="PId" msprop:Generator_ColumnPropNameInTable="PIdColumn" msprop:Generator_UserColumnName="PId" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

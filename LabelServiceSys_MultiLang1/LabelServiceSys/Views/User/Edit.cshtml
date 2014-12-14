@@ -1,0 +1,185 @@
+﻿@using LabelServiceSys.Models;
+@model Model.M_User
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="@Url.Content("~/JS/UserManagement_Update.js")" type="text/javascript"></script>
+</head>
+@*<body>
+    @using (Html.BeginForm("Edit", "User", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+        <table cellpadding="3">
+            <tr>
+                <td>
+                    用户号:
+                </td>
+                <td>
+                    <input type="text" id="txturNum" name="txturNum" value="@Model.urNum" class="easyui-validatebox" required="true" />
+                    <input type="hidden" id="txturID" name="txturID" value="@Model.urID"  class="easyui-validatebox" required="true"/>
+                </td>
+                <td>
+                    用户密码:
+                </td>
+                <td>
+                    <input type="password" id="txturPSW" name="txturPSW" class="easyui-validatebox" required="true" />
+                </td>
+                <td>
+                    确认密码:
+                </td>
+                <td>
+                    <input type="password" id="txtReurPSW" name="txtReurPSW" class="easyui-validatebox"
+                        required="true" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    姓名:
+                </td>
+                <td>
+                    <input type="text" id="txturName" name="txturName"  value="@Model.urName" />
+                </td>
+                <td>
+                    性别:
+                </td>
+                <td>
+                    <input type="text" id="ddurSex" name="ddurSex"  value="@Model.urSex" />
+                    <input type="hidden" id="txturSex" name="txturSex" value="@Model.urSex" />
+                </td>
+                <td>
+                    年龄:
+                </td>
+                <td>
+                    <input type="text" id="txturAge" name="txturAge" style="width: 100%"  value="@Model.urAge" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    员工工号:
+                </td>
+                <td>
+                    <input type="text" id="txturStaffNum" name="txturStaffNum"  value="@Model.urStaffNum" />
+                </td>
+                <td>
+                    用户部门:
+                </td>
+                <td>
+                    <input type="text" id="txturDept" name="txturDept"  value="@Model.urDept" />
+                </td>
+                <td>
+                    用户职位:
+                </td>
+                <td>
+                    <input type="text" id="txturDuty" name="txturDuty"  value="@Model.urDuty" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    口岸代码:
+                </td>
+                <td>
+                    <input type="text" id="ddlurUnitCode" name="ddlurUnitCode" class="easyui-validatebox"
+                        required="true"  value="@Model.urUnitCode"  />
+                    <input type="hidden" id="txturUnitCode"  name="txturUnitCode" value="@Model.urUnitCode" />
+                </td>
+                <td>
+                    备注:
+                </td>
+                <td colspan="3">
+                    <textarea id="areaurMemo" name="areaurMemo" style="width: 100%" rows="3"> @Model.urMemo</textarea>
+                    <input type="hidden" id="txturMemo"   name="txturMemo" value="@Model.urMemo" />
+                </td>
+            </tr>
+        </table> 
+    }
+</body>*@
+
+<body>
+    @using (Html.BeginForm("Edit", "User", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+        <table cellpadding="3">
+            <tr>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label1"):
+                </td>
+                <td>
+                    <input type="text" id="txturNum" name="txturNum" value="@Model.urNum" class="easyui-validatebox" required="true" />
+                    <input type="hidden" id="txturID" name="txturID" value="@Model.urID"  class="easyui-validatebox" required="true"/>
+                </td>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label2"):
+                </td>
+                <td>
+                    <input type="password" id="txturPSW" name="txturPSW" class="easyui-validatebox" required="true" />
+                </td>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label3"):
+                </td>
+                <td>
+                    <input type="password" id="txtReurPSW" name="txtReurPSW" class="easyui-validatebox"
+                        required="true" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label4"):
+                </td>
+                <td>
+                    <input type="text" id="txturName" name="txturName"  value="@Model.urName" />
+                </td>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label5"):
+                </td>
+                <td>
+                    <input type="text" id="ddurSex" name="ddurSex"  value="@Model.urSex" />
+                    <input type="hidden" id="txturSex" name="txturSex" value="@Model.urSex" />
+                </td>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label6"):
+                </td>
+                <td>
+                    <input type="text" id="txturAge" name="txturAge" style="width: 100%"  value="@Model.urAge" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label7"):
+                </td>
+                <td>
+                    <input type="text" id="txturStaffNum" name="txturStaffNum"  value="@Model.urStaffNum" />
+                </td>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label8"):
+                </td>
+                <td>
+                    <input type="text" id="txturDept" name="txturDept"  value="@Model.urDept" />
+                </td>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label9"):
+                </td>
+                <td>
+                    <input type="text" id="txturDuty" name="txturDuty"  value="@Model.urDuty" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label10"):
+                </td>
+                <td>
+                    <input type="text" id="ddlurUnitCode" name="ddlurUnitCode" class="easyui-validatebox"
+                        required="true"  value="@Model.urUnitCode"  />
+                    <input type="hidden" id="txturUnitCode"  name="txturUnitCode" value="@Model.urUnitCode" />
+                </td>
+                <td>
+                    @Html.GetLangbyKey("User_Html_Edit_Label11"):
+                </td>
+                <td colspan="3">
+                    <textarea id="areaurMemo" name="areaurMemo" style="width: 100%" rows="3"> @Model.urMemo</textarea>
+                    <input type="hidden" id="txturMemo"   name="txturMemo" value="@Model.urMemo" />
+                </td>
+            </tr>
+        </table> 
+    }
+</body>
+</html>

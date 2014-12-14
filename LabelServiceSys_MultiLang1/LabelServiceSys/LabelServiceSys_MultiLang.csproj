@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23B1027F-DA90-4536-B777-9203D9360218}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabelServiceSys</RootNamespace>
+    <AssemblyName>LabelServiceSys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MicrosoftWebInfrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Optimization">
+      <HintPath>..\packages\Microsoft.Web.Optimization.0.1\lib\net40\Microsoft.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPagesCore.2.0.10906.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetMvc.4.0.10906.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\System.Web.Providers.1.0.1\lib\Net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPagesCore.2.0.10906.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPagesCore.2.0.10906.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPagesCore.2.0.10906.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AspNetWebPagesCore.2.0.10906.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobNameManagementController.cs" />
+    <Compile Include="Controllers\LoginCenterController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OperationLogController.cs" />
+    <Compile Include="Controllers\OperationLog_HawbController.cs" />
+    <Compile Include="Controllers\OperationLog_Hawb_PcidController.cs" />
+    <Compile Include="Controllers\OperationLog_HUController.cs" />
+    <Compile Include="Controllers\OperationLog_LoginController.cs" />
+    <Compile Include="Controllers\OperationLog_OtherController.cs" />
+    <Compile Include="Controllers\OperationLog_PcidController.cs" />
+    <Compile Include="Controllers\MonitorController.cs" />
+    <Compile Include="Controllers\Position_CCTV_WorkstationController.cs" />
+    <Compile Include="Controllers\SysUserManagementController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UtilController.cs" />
+    <Compile Include="Filter\ErrorAttribute.cs" />
+    <Compile Include="Filter\LoginValidateAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCenter.aspx.cs">
+      <DependentUpon>LoginCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginCenter.aspx.designer.cs">
+      <DependentUpon>LoginCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LangHelper.cs" />
+    <Compile Include="OperationLog_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationLog_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLog_Hawb_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationLog_Hawb_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLog_Hawb_Pcid_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationLog_Hawb_Pcid_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLog_HU_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationLog_HU_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLog_Login_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationLog_Login_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLog_Other_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationLog_Other_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLog_Pcid_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationLog_Pcid_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PositionCCTVWorkstation_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PositionCCTVWorkstation_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintBarcode_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintBarcode_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\en-US.Designer.cs" />
+    <Compile Include="Resources\en-US1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\zh-CN.Designer.cs" />
+    <Compile Include="Resources\zh-CN1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Users_DS.Designer.cs" />
+    <Compile Include="SysUsers_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysUsers_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="User_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLoginInfo.aspx.cs">
+      <DependentUpon>ViewLoginInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewLoginInfo.aspx.designer.cs">
+      <DependentUpon>ViewLoginInfo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\Error\bg.gif" />
+    <Content Include="images\Error\emessage.gif" />
+    <Content Include="images\Error\error.gif" />
+    <Content Include="images\Error\left.gif" />
+    <Content Include="images\Error\right.gif" />
+    <Content Include="images\Login\bt_bg.gif" />
+    <Content Include="images\Login\login.css" />
+    <Content Include="images\Login\login_03.gif" />
+    <Content Include="images\Login\login_05.gif" />
+    <Content Include="images\Login\login_09.gif" />
+    <Content Include="images\Login\login_11.gif" />
+    <Content Include="images\Login\login_13.gif" />
+    <Content Include="images\Login\login_16.gif" />
+    <Content Include="images\Login\login_18.gif" />
+    <Content Include="JqueryUI\easyui-lang-zh_CN.js" />
+    <Content Include="JqueryUI\jquery.easyui.min.js" />
+    <Content Include="JqueryUI\themes\black\accordion.css" />
+    <Content Include="JqueryUI\themes\black\calendar.css" />
+    <Content Include="JqueryUI\themes\black\combo.css" />
+    <Content Include="JqueryUI\themes\black\combobox.css" />
+    <Content Include="JqueryUI\themes\black\datagrid.css" />
+    <Content Include="JqueryUI\themes\black\datebox.css" />
+    <Content Include="JqueryUI\themes\black\dialog.css" />
+    <Content Include="JqueryUI\themes\black\easyui.css" />
+    <Content Include="JqueryUI\themes\black\filebox.css" />
+    <Content Include="JqueryUI\themes\black\images\accordion_arrows.png" />
+    <Content Include="JqueryUI\themes\black\images\blank.gif" />
+    <Content Include="JqueryUI\themes\black\images\calendar_arrows.png" />
+    <Content Include="JqueryUI\themes\black\images\combo_arrow.png" />
+    <Content Include="JqueryUI\themes\black\images\datagrid_icons.png" />
+    <Content Include="JqueryUI\themes\black\images\datebox_arrow.png" />
+    <Content Include="JqueryUI\themes\black\images\layout_arrows.png" />
+    <Content Include="JqueryUI\themes\black\images\linkbutton_bg.png" />
+    <Content Include="JqueryUI\themes\black\images\loading.gif" />
+    <Content Include="JqueryUI\themes\black\images\menu_arrows.png" />
+    <Content Include="JqueryUI\themes\black\images\messager_icons.png" />
+    <Content Include="JqueryUI\themes\black\images\pagination_icons.png" />
+    <Content Include="JqueryUI\themes\black\images\panel_tools.png" />
+    <Content Include="JqueryUI\themes\black\images\searchbox_button.png" />
+    <Content Include="JqueryUI\themes\black\images\slider_handle.png" />
+    <Content Include="JqueryUI\themes\black\images\spinner_arrows.png" />
+    <Content Include="JqueryUI\themes\black\images\tabs_icons.png" />
+    <Content Include="JqueryUI\themes\black\images\tree_icons.png" />
+    <Content Include="JqueryUI\themes\black\images\validatebox_warning.png" />
+    <Content Include="JqueryUI\themes\black\layout.css" />
+    <Content Include="JqueryUI\themes\black\linkbutton.css" />
+    <Content Include="JqueryUI\themes\black\menu.css" />
+    <Content Include="JqueryUI\themes\black\menubutton.css" />
+    <Content Include="JqueryUI\themes\black\messager.css" />
+    <Content Include="JqueryUI\themes\black\numberbox.css" />
+    <Content Include="JqueryUI\themes\black\pagination.css" />
+    <Content Include="JqueryUI\themes\black\panel.css" />
+    <Content Include="JqueryUI\themes\black\progressbar.css" />
+    <Content Include="JqueryUI\themes\black\propertygrid.css" />
+    <Content Include="JqueryUI\themes\black\searchbox.css" />
+    <Content Include="JqueryUI\themes\black\slider.css" />
+    <Content Include="JqueryUI\themes\black\spinner.css" />
+    <Content Include="JqueryUI\themes\black\splitbutton.css" />
+    <Content Include="JqueryUI\themes\black\tabs.css" />
+    <Content Include="JqueryUI\themes\black\textbox.css" />
+    <Content Include="JqueryUI\themes\black\tooltip.css" />
+    <Content Include="JqueryUI\themes\black\tree.css" />
+    <Content Include="JqueryUI\themes\black\validatebox.css" />
+    <Content Include="JqueryUI\themes\black\window.css" />
+    <Content Include="JqueryUI\themes\bootstrap\accordion.css" />
+    <Content Include="JqueryUI\themes\bootstrap\calendar.css" />
+    <Content Include="JqueryUI\themes\bootstrap\combo.css" />
+    <Content Include="JqueryUI\themes\bootstrap\combobox.css" />
+    <Content Include="JqueryUI\themes\bootstrap\datagrid.css" />
+    <Content Include="JqueryUI\themes\bootstrap\datebox.css" />
+    <Content Include="JqueryUI\themes\bootstrap\dialog.css" />
+    <Content Include="JqueryUI\themes\bootstrap\easyui.css" />
+    <Content Include="JqueryUI\themes\bootstrap\filebox.css" />
+    <Content Include="JqueryUI\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\black.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\black_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\blank.gif" />
+    <Content Include="JqueryUI\themes\bootstrap\images\bootstrap.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\bootstrap_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\cupertino.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\cupertino_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\dark-hive.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\dark-hive_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\default.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\default_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\gray.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\gray_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\loading.gif" />
+    <Content Include="JqueryUI\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-blue.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-blue_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-gray.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-gray_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-green.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-green_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-orange.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-orange_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-red.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro-red_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\metro_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\pepper-grinder.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\pepper-grinder_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\sunny.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\sunny_cur.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="JqueryUI\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="JqueryUI\themes\bootstrap\layout.css" />
+    <Content Include="JqueryUI\themes\bootstrap\linkbutton.css" />
+    <Content Include="JqueryUI\themes\bootstrap\menu.css" />
+    <Content Include="JqueryUI\themes\bootstrap\menubutton.css" />
+    <Content Include="JqueryUI\themes\bootstrap\messager.css" />
+    <Content Include="JqueryUI\themes\bootstrap\numberbox.css" />
+    <Content Include="JqueryUI\themes\bootstrap\pagination.css" />
+    <Content Include="JqueryUI\themes\bootstrap\panel.css" />
+    <Content Include="JqueryUI\themes\bootstrap\progressbar.css" />
+    <Content Include="JqueryUI\themes\bootstrap\propertygrid.css" />
+    <Content Include="JqueryUI\themes\bootstrap\searchbox.css" />
+    <Content Include="JqueryUI\themes\bootstrap\slider.css" />
+    <Content Include="JqueryUI\themes\bootstrap\spinner.css" />
+    <Content Include="JqueryUI\themes\bootstrap\splitbutton.css" />
+    <Content Include="JqueryUI\themes\bootstrap\tabs.css" />
+    <Content Include="JqueryUI\themes\bootstrap\textbox.css" />
+    <Content Include="JqueryUI\themes\bootstrap\tooltip.css" />
+    <Content Include="JqueryUI\themes\bootstrap\tree.css" />
+    <Content Include="JqueryUI\themes\bootstrap\validatebox.css" />
+    <Content Include="JqueryUI\themes\bootstrap\window.css" />
+    <Content Include="JqueryUI\themes\color.css" />
+    <Content Include="JqueryUI\themes\default\accordion.css" />
+    <Content Include="JqueryUI\themes\default\calendar.css" />
+    <Content Include="JqueryUI\themes\default\combo.css" />
+    <Content Include="JqueryUI\themes\default\combobox.css" />
+    <Content Include="JqueryUI\themes\default\datagrid.css" />
+    <Content Include="JqueryUI\themes\default\datebox.css" />
+    <Content Include="JqueryUI\themes\default\dialog.css" />
+    <Content Include="JqueryUI\themes\default\easyui.css" />
+    <Content Include="JqueryUI\themes\default\filebox.css" />
+    <Content Include="JqueryUI\themes\default\images\accordion_arrows.png" />
+    <Content Include="JqueryUI\themes\default\images\black.png" />
+    <Content Include="JqueryUI\themes\default\images\black_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\blank.gif" />
+    <Content Include="JqueryUI\themes\default\images\bootstrap.png" />
+    <Content Include="JqueryUI\themes\default\images\bootstrap_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\calendar_arrows.png" />
+    <Content Include="JqueryUI\themes\default\images\combo_arrow.png" />
+    <Content Include="JqueryUI\themes\default\images\cupertino.png" />
+    <Content Include="JqueryUI\themes\default\images\cupertino_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\dark-hive.png" />
+    <Content Include="JqueryUI\themes\default\images\dark-hive_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\datagrid_icons.png" />
+    <Content Include="JqueryUI\themes\default\images\datebox_arrow.png" />
+    <Content Include="JqueryUI\themes\default\images\default.png" />
+    <Content Include="JqueryUI\themes\default\images\default_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\gray.png" />
+    <Content Include="JqueryUI\themes\default\images\gray_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\layout_arrows.png" />
+    <Content Include="JqueryUI\themes\default\images\linkbutton_bg.png" />
+    <Content Include="JqueryUI\themes\default\images\loading.gif" />
+    <Content Include="JqueryUI\themes\default\images\menu_arrows.png" />
+    <Content Include="JqueryUI\themes\default\images\messager_icons.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-blue.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-blue_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-gray.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-gray_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-green.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-green_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-orange.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-orange_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-red.png" />
+    <Content Include="JqueryUI\themes\default\images\metro-red_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\metro.png" />
+    <Content Include="JqueryUI\themes\default\images\metro_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\pagination_icons.png" />
+    <Content Include="JqueryUI\themes\default\images\panel_tools.png" />
+    <Content Include="JqueryUI\themes\default\images\pepper-grinder.png" />
+    <Content Include="JqueryUI\themes\default\images\pepper-grinder_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\searchbox_button.png" />
+    <Content Include="JqueryUI\themes\default\images\slider_handle.png" />
+    <Content Include="JqueryUI\themes\default\images\spinner_arrows.png" />
+    <Content Include="JqueryUI\themes\default\images\sunny.png" />
+    <Content Include="JqueryUI\themes\default\images\sunny_cur.png" />
+    <Content Include="JqueryUI\themes\default\images\tabs_icons.png" />
+    <Content Include="JqueryUI\themes\default\images\tree_icons.png" />
+    <Content Include="JqueryUI\themes\default\images\validatebox_warning.png" />
+    <Content Include="JqueryUI\themes\default\layout.css" />
+    <Content Include="JqueryUI\themes\default\linkbutton.css" />
+    <Content Include="JqueryUI\themes\default\menu.css" />
+    <Content Include="JqueryUI\themes\default\menubutton.css" />
+    <Content Include="JqueryUI\themes\default\messager.css" />
+    <Content Include="JqueryUI\themes\default\numberbox.css" />
+    <Content Include="JqueryUI\themes\default\pagination.css" />
+    <Content Include="JqueryUI\themes\default\panel.css" />
+    <Content Include="JqueryUI\themes\default\progressbar.css" />
+    <Content Include="JqueryUI\themes\default\propertygrid.css" />
+    <Content Include="JqueryUI\themes\default\searchbox.css" />
+    <Content Include="JqueryUI\themes\default\slider.css" />
+    <Content Include="JqueryUI\themes\default\spinner.css" />
+    <Content Include="JqueryUI\themes\default\splitbutton.css" />
+    <Content Include="JqueryUI\themes\default\tabs.css" />
+    <Content Include="JqueryUI\themes\default\textbox.css" />
+    <Content Include="JqueryUI\themes\default\tooltip.css" />
+    <Content Include="JqueryUI\themes\default\tree.css" />
+    <Content Include="JqueryUI\themes\default\validatebox.css" />
+    <Content Include="JqueryUI\themes\default\window.css" />
+    <Content Include="JqueryUI\themes\gray\accordion.css" />
+    <Content Include="JqueryUI\themes\gray\calendar.css" />
+    <Content Include="JqueryUI\themes\gray\combo.css" />
+    <Content Include="JqueryUI\themes\gray\combobox.css" />
+    <Content Include="JqueryUI\themes\gray\datagrid.css" />
+    <Content Include="JqueryUI\themes\gray\datebox.css" />
+    <Content Include="JqueryUI\themes\gray\dialog.css" />
+    <Content Include="JqueryUI\themes\gray\easyui.css" />
+    <Content Include="JqueryUI\themes\gray\filebox.css" />
+    <Content Include="JqueryUI\themes\gray\images\accordion_arrows.png" />
+    <Content Include="JqueryUI\themes\gray\images\black.png" />
+    <Content Include="JqueryUI\themes\gray\images\black_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\blank.gif" />
+    <Content Include="JqueryUI\themes\gray\images\bootstrap.png" />
+    <Content Include="JqueryUI\themes\gray\images\bootstrap_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\calendar_arrows.png" />
+    <Content Include="JqueryUI\themes\gray\images\combo_arrow.png" />
+    <Content Include="JqueryUI\themes\gray\images\cupertino.png" />
+    <Content Include="JqueryUI\themes\gray\images\cupertino_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\dark-hive.png" />
+    <Content Include="JqueryUI\themes\gray\images\dark-hive_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\datagrid_icons.png" />
+    <Content Include="JqueryUI\themes\gray\images\datebox_arrow.png" />
+    <Content Include="JqueryUI\themes\gray\images\default.png" />
+    <Content Include="JqueryUI\themes\gray\images\default_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\gray.png" />
+    <Content Include="JqueryUI\themes\gray\images\gray_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\layout_arrows.png" />
+    <Content Include="JqueryUI\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="JqueryUI\themes\gray\images\loading.gif" />
+    <Content Include="JqueryUI\themes\gray\images\menu_arrows.png" />
+    <Content Include="JqueryUI\themes\gray\images\messager_icons.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-blue.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-blue_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-gray.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-gray_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-green.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-green_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-orange.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-orange_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-red.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro-red_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro.png" />
+    <Content Include="JqueryUI\themes\gray\images\metro_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\pagination_icons.png" />
+    <Content Include="JqueryUI\themes\gray\images\panel_tools.png" />
+    <Content Include="JqueryUI\themes\gray\images\pepper-grinder.png" />
+    <Content Include="JqueryUI\themes\gray\images\pepper-grinder_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\searchbox_button.png" />
+    <Content Include="JqueryUI\themes\gray\images\slider_handle.png" />
+    <Content Include="JqueryUI\themes\gray\images\spinner_arrows.png" />
+    <Content Include="JqueryUI\themes\gray\images\sunny.png" />
+    <Content Include="JqueryUI\themes\gray\images\sunny_cur.png" />
+    <Content Include="JqueryUI\themes\gray\images\tabs_icons.png" />
+    <Content Include="JqueryUI\themes\gray\images\tree_icons.png" />
+    <Content Include="JqueryUI\themes\gray\images\validatebox_warning.png" />
+    <Content Include="JqueryUI\themes\gray\layout.css" />
+    <Content Include="JqueryUI\themes\gray\linkbutton.css" />
+    <Content Include="JqueryUI\themes\gray\menu.css" />
+    <Content Include="JqueryUI\themes\gray\menubutton.css" />
+    <Content Include="JqueryUI\themes\gray\messager.css" />
+    <Content Include="JqueryUI\themes\gray\numberbox.css" />
+    <Content Include="JqueryUI\themes\gray\pagination.css" />
+    <Content Include="JqueryUI\themes\gray\panel.css" />
+    <Content Include="JqueryUI\themes\gray\progressbar.css" />
+    <Content Include="JqueryUI\themes\gray\propertygrid.css" />
+    <Content Include="JqueryUI\themes\gray\searchbox.css" />
+    <Content Include="JqueryUI\themes\gray\slider.css" />
+    <Content Include="JqueryUI\themes\gray\spinner.css" />
+    <Content Include="JqueryUI\themes\gray\splitbutton.css" />
+    <Content Include="JqueryUI\themes\gray\tabs.css" />
+    <Content Include="JqueryUI\themes\gray\textbox.css" />
+    <Content Include="JqueryUI\themes\gray\tooltip.css" />
+    <Content Include="JqueryUI\themes\gray\tree.css" />
+    <Content Include="JqueryUI\themes\gray\validatebox.css" />
+    <Content Include="JqueryUI\themes\gray\window.css" />
+    <Content Include="JqueryUI\themes\icon.css" />
+    <Content Include="JqueryUI\themes\icons\accordion_collapse.png" />
+    <Content Include="JqueryUI\themes\icons\accordion_expand.png" />
+    <Content Include="JqueryUI\themes\icons\attachment.png" />
+    <Content Include="JqueryUI\themes\icons\back.png" />
+    <Content Include="JqueryUI\themes\icons\barcode.png" />
+    <Content Include="JqueryUI\themes\icons\blacklist_type.png" />
+    <Content Include="JqueryUI\themes\icons\blank.gif" />
+    <Content Include="JqueryUI\themes\icons\cancel.png" />
+    <Content Include="JqueryUI\themes\icons\Check.png" />
+    <Content Include="JqueryUI\themes\icons\clear.png" />
+    <Content Include="JqueryUI\themes\icons\custmer_scensecheck.png" />
+    <Content Include="JqueryUI\themes\icons\customer_check.png" />
+    <Content Include="JqueryUI\themes\icons\customer_exceptionhandler.png" />
+    <Content Include="JqueryUI\themes\icons\customer_prosecc.png" />
+    <Content Include="JqueryUI\themes\icons\customer_rejectgoods.png" />
+    <Content Include="JqueryUI\themes\icons\customer_release.png" />
+    <Content Include="JqueryUI\themes\icons\customer_setting.png" />
+    <Content Include="JqueryUI\themes\icons\customer_statistic.png" />
+    <Content Include="JqueryUI\themes\icons\customer_taxvaluecheck.png" />
+    <Content Include="JqueryUI\themes\icons\customer_unrelease.png" />
+    <Content Include="JqueryUI\themes\icons\cut.png" />
+    <Content Include="JqueryUI\themes\icons\Detain.png" />
+    <Content Include="JqueryUI\themes\icons\Disable.png" />
+    <Content Include="JqueryUI\themes\icons\edit_add.png" />
+    <Content Include="JqueryUI\themes\icons\edit_remove.png" />
+    <Content Include="JqueryUI\themes\icons\email.png" />
+    <Content Include="JqueryUI\themes\icons\Enable.png" />
+    <Content Include="JqueryUI\themes\icons\Excel.png" />
+    <Content Include="JqueryUI\themes\icons\exit.png" />
+    <Content Include="JqueryUI\themes\icons\filesave.png" />
+    <Content Include="JqueryUI\themes\icons\filter.png" />
+    <Content Include="JqueryUI\themes\icons\forwarder_import.png" />
+    <Content Include="JqueryUI\themes\icons\forwarder_personal.png" />
+    <Content Include="JqueryUI\themes\icons\forwarder_search.png" />
+    <Content Include="JqueryUI\themes\icons\FullScreen.png" />
+    <Content Include="JqueryUI\themes\icons\help.png" />
+    <Content Include="JqueryUI\themes\icons\homepage.png" />
+    <Content Include="JqueryUI\themes\icons\huayu_application.png" />
+    <Content Include="JqueryUI\themes\icons\huayu_exception.png" />
+    <Content Include="JqueryUI\themes\icons\huayu_instore.png" />
+    <Content Include="JqueryUI\themes\icons\huayu_monitor.png" />
+    <Content Include="JqueryUI\themes\icons\huayu_outstore.png" />
+    <Content Include="JqueryUI\themes\icons\huayu_report.png" />
+    <Content Include="JqueryUI\themes\icons\huayu_store.png" />
+    <Content Include="JqueryUI\themes\icons\icon-color-appworkspace.png" />
+    <Content Include="JqueryUI\themes\icons\icon-color-blue.png" />
+    <Content Include="JqueryUI\themes\icons\icon-color-fuchsia.png" />
+    <Content Include="JqueryUI\themes\icons\icon-color-green.png" />
+    <Content Include="JqueryUI\themes\icons\icon-color-lime.png" />
+    <Content Include="JqueryUI\themes\icons\icon-color-maroon.png" />
+    <Content Include="JqueryUI\themes\icons\icon-color-red.png" />
+    <Content Include="JqueryUI\themes\icons\icon-customer_check.png" />
+    <Content Include="JqueryUI\themes\icons\Information.png" />
+    <Content Include="JqueryUI\themes\icons\InStore.png" />
+    <Content Include="JqueryUI\themes\icons\InverseSele.png" />
+    <Content Include="JqueryUI\themes\icons\large_chart.png" />
+    <Content Include="JqueryUI\themes\icons\large_clipart.png" />
+    <Content Include="JqueryUI\themes\icons\large_picture.png" />
+    <Content Include="JqueryUI\themes\icons\large_shapes.png" />
+    <Content Include="JqueryUI\themes\icons\large_smartart.png" />
+    <Content Include="JqueryUI\themes\icons\lock.png" />
+    <Content Include="JqueryUI\themes\icons\Login.png" />
+    <Content Include="JqueryUI\themes\icons\man.png" />
+    <Content Include="JqueryUI\themes\icons\mini_add.png" />
+    <Content Include="JqueryUI\themes\icons\mini_edit.png" />
+    <Content Include="JqueryUI\themes\icons\mini_refresh.png" />
+    <Content Include="JqueryUI\themes\icons\no.png" />
+    <Content Include="JqueryUI\themes\icons\ok.png" />
+    <Content Include="JqueryUI\themes\icons\operation_blacklist.png" />
+    <Content Include="JqueryUI\themes\icons\operation_dealwith.png" />
+    <Content Include="JqueryUI\themes\icons\OutStore.png" />
+    <Content Include="JqueryUI\themes\icons\pdf.png" />
+    <Content Include="JqueryUI\themes\icons\pencil.png" />
+    <Content Include="JqueryUI\themes\icons\Preview.png" />
+    <Content Include="JqueryUI\themes\icons\print.png" />
+    <Content Include="JqueryUI\themes\icons\redo.png" />
+    <Content Include="JqueryUI\themes\icons\Reject.png" />
+    <Content Include="JqueryUI\themes\icons\Release.png" />
+    <Content Include="JqueryUI\themes\icons\reload.png" />
+    <Content Include="JqueryUI\themes\icons\report.png" />
+    <Content Include="JqueryUI\themes\icons\Reset.png" />
+    <Content Include="JqueryUI\themes\icons\ResetScreen.png" />
+    <Content Include="JqueryUI\themes\icons\search.png" />
+    <Content Include="JqueryUI\themes\icons\SeleAll.png" />
+    <Content Include="JqueryUI\themes\icons\sum.png" />
+    <Content Include="JqueryUI\themes\icons\tip.png" />
+    <Content Include="JqueryUI\themes\icons\UnCheck.png" />
+    <Content Include="JqueryUI\themes\icons\undo.png" />
+    <Content Include="JqueryUI\themes\icons\up.png" />
+    <Content Include="JqueryUI\themes\icons\user.png" />
+    <Content Include="JqueryUI\themes\icons\user_accept.png" />
+    <Content Include="JqueryUI\themes\icons\window_remove.png" />
+    <Content Include="JqueryUI\themes\metro\accordion.css" />
+    <Content Include="JqueryUI\themes\metro\calendar.css" />
+    <Content Include="JqueryUI\themes\metro\combo.css" />
+    <Content Include="JqueryUI\themes\metro\combobox.css" />
+    <Content Include="JqueryUI\themes\metro\datagrid.css" />
+    <Content Include="JqueryUI\themes\metro\datebox.css" />
+    <Content Include="JqueryUI\themes\metro\dialog.css" />
+    <Content Include="JqueryUI\themes\metro\easyui.css" />
+    <Content Include="JqueryUI\themes\metro\filebox.css" />
+    <Content Include="JqueryUI\themes\metro\images\accordion_arrows.png" />
+    <Content Include="JqueryUI\themes\metro\images\black.png" />
+    <Content Include="JqueryUI\themes\metro\images\black_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\blank.gif" />
+    <Content Include="JqueryUI\themes\metro\images\bootstrap.png" />
+    <Content Include="JqueryUI\themes\metro\images\bootstrap_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\calendar_arrows.png" />
+    <Content Include="JqueryUI\themes\metro\images\combo_arrow.png" />
+    <Content Include="JqueryUI\themes\metro\images\cupertino.png" />
+    <Content Include="JqueryUI\themes\metro\images\cupertino_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\dark-hive.png" />
+    <Content Include="JqueryUI\themes\metro\images\dark-hive_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\datagrid_icons.png" />
+    <Content Include="JqueryUI\themes\metro\images\datebox_arrow.png" />
+    <Content Include="JqueryUI\themes\metro\images\default.png" />
+    <Content Include="JqueryUI\themes\metro\images\default_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\gray.png" />
+    <Content Include="JqueryUI\themes\metro\images\gray_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\layout_arrows.png" />
+    <Content Include="JqueryUI\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="JqueryUI\themes\metro\images\loading.gif" />
+    <Content Include="JqueryUI\themes\metro\images\menu_arrows.png" />
+    <Content Include="JqueryUI\themes\metro\images\messager_icons.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-blue.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-blue_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-gray.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-gray_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-green.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-green_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-orange.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-orange_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-red.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro-red_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro.png" />
+    <Content Include="JqueryUI\themes\metro\images\metro_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\pagination_icons.png" />
+    <Content Include="JqueryUI\themes\metro\images\panel_tools.png" />
+    <Content Include="JqueryUI\themes\metro\images\pepper-grinder.png" />
+    <Content Include="JqueryUI\themes\metro\images\pepper-grinder_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\searchbox_button.png" />
+    <Content Include="JqueryUI\themes\metro\images\slider_handle.png" />
+    <Content Include="JqueryUI\themes\metro\images\spinner_arrows.png" />
+    <Content Include="JqueryUI\themes\metro\images\sunny.png" />
+    <Content Include="JqueryUI\themes\metro\images\sunny_cur.png" />
+    <Content Include="JqueryUI\themes\metro\images\tabs_icons.png" />
+    <Content Include="JqueryUI\themes\metro\images\tree_icons.png" />
+    <Content Include="JqueryUI\themes\metro\images\validatebox_warning.png" />
+    <Content Include="JqueryUI\themes\metro\layout.css" />
+    <Content Include="JqueryUI\themes\metro\linkbutton.css" />
+    <Content Include="JqueryUI\themes\metro\menu.css" />
+    <Content Include="JqueryUI\themes\metro\menubutton.css" />
+    <Content Include="JqueryUI\themes\metro\messager.css" />
+    <Content Include="JqueryUI\themes\metro\numberbox.css" />
+    <Content Include="JqueryUI\themes\metro\pagination.css" />
+    <Content Include="JqueryUI\themes\metro\panel.css" />
+    <Content Include="JqueryUI\themes\metro\progressbar.css" />
+    <Content Include="JqueryUI\themes\metro\propertygrid.css" />
+    <Content Include="JqueryUI\themes\metro\searchbox.css" />
+    <Content Include="JqueryUI\themes\metro\slider.css" />
+    <Content Include="JqueryUI\themes\metro\spinner.css" />
+    <Content Include="JqueryUI\themes\metro\splitbutton.css" />
+    <Content Include="JqueryUI\themes\metro\tabs.css" />
+    <Content Include="JqueryUI\themes\metro\textbox.css" />
+    <Content Include="JqueryUI\themes\metro\tooltip.css" />
+    <Content Include="JqueryUI\themes\metro\tree.css" />
+    <Content Include="JqueryUI\themes\metro\validatebox.css" />
+    <Content Include="JqueryUI\themes\metro\window.css" />
+    <Content Include="JS\Common\Common.js" />
+    <Content Include="JS\Common\util.js" />
+    <Content Include="JS\JobNameManagement.js" />
+    <Content Include="JS\Login.js" />
+    <Content Include="JS\LoginCenter_Login.js" />
+    <Content Include="JS\OperationLog_Hawb_Pcid.js" />
+    <Content Include="JS\Position_CCTV_Workstation.js" />
+    <Content Include="JS\Site.js" />
+    <Content Include="JS\SysUserManagement.js" />
+    <Content Include="JS\UserManagement.js" />
+    <Content Include="JS\UserManagement_Create.js" />
+    <Content Include="JS\UserManagement_Update.js" />
+    <Content Include="JS\OperationLog.js" />
+    <Content Include="JS\OperationLog_HU.js" />
+    <Content Include="JS\OperationLog_Login.js" />
+    <Content Include="JS\OperationLog_Other.js" />
+    <Content Include="JS\OperationLog_Pcid.js" />
+    <Content Include="JS\LoginCenter_LoginInfo.js" />
+    <Content Include="JS\副本 LoginCenter_Login.js" />
+    <Content Include="JS\副本 LoginCenter_LoginInfo.js" />
+    <Content Include="LoginCenter.aspx" />
+    <Content Include="login\images\bt_bg.gif" />
+    <Content Include="login\images\login.css" />
+    <Content Include="login\images\login_03.gif" />
+    <Content Include="login\images\login_05.gif" />
+    <Content Include="login\images\login_09.gif" />
+    <Content Include="login\images\login_11.gif" />
+    <Content Include="login\images\login_13.gif" />
+    <Content Include="login\images\login_16.gif" />
+    <Content Include="login\images\login_18.gif" />
+    <Content Include="login\login.html" />
+    <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.2.js" />
+    <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-1.3.0beta.debug.js" />
+    <Content Include="Scripts\knockout-1.3.0beta.js" />
+    <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
+    <Content Include="Scripts\My97DatePicker\calendar.js" />
+    <Content Include="Scripts\My97DatePicker\lang\en.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="Scripts\My97DatePicker\开发包\readme.txt" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Temp\imgs\BarCode20140910143928.gif" />
+    <Content Include="txt\log.txt" />
+    <Content Include="ViewLoginInfo.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Temp\Xls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Default\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Default\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Reports\OperationLog_Login.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Reports\OperationLog_Pcid.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Reports\OperationLog_Other.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JS\OperationLog_Hawb.js" />
+    <Content Include="Font\IDAutomationHC39M.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="login\images\Thumbs.db" />
+    <None Include="OperationLog_DS.xsc">
+      <DependentUpon>OperationLog_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationLog_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OperationLog_DS.xss">
+      <DependentUpon>OperationLog_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Hawb_DS.xsc">
+      <DependentUpon>OperationLog_Hawb_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Hawb_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationLog_Hawb_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OperationLog_Hawb_DS.xss">
+      <DependentUpon>OperationLog_Hawb_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Hawb_Pcid_DS.xsc">
+      <DependentUpon>OperationLog_Hawb_Pcid_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Hawb_Pcid_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationLog_Hawb_Pcid_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OperationLog_Hawb_Pcid_DS.xss">
+      <DependentUpon>OperationLog_Hawb_Pcid_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_HU_DS.xsc">
+      <DependentUpon>OperationLog_HU_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_HU_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationLog_HU_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OperationLog_HU_DS.xss">
+      <DependentUpon>OperationLog_HU_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Login_DS.xsc">
+      <DependentUpon>OperationLog_Login_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Login_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationLog_Login_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OperationLog_Login_DS.xss">
+      <DependentUpon>OperationLog_Login_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Other_DS.xsc">
+      <DependentUpon>OperationLog_Other_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Other_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationLog_Other_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OperationLog_Other_DS.xss">
+      <DependentUpon>OperationLog_Other_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Pcid_DS.xsc">
+      <DependentUpon>OperationLog_Pcid_DS.xsd</DependentUpon>
+    </None>
+    <None Include="OperationLog_Pcid_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperationLog_Pcid_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OperationLog_Pcid_DS.xss">
+      <DependentUpon>OperationLog_Pcid_DS.xsd</DependentUpon>
+    </None>
+    <None Include="PositionCCTVWorkstation_DS.xsc">
+      <DependentUpon>PositionCCTVWorkstation_DS.xsd</DependentUpon>
+    </None>
+    <None Include="PositionCCTVWorkstation_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PositionCCTVWorkstation_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PositionCCTVWorkstation_DS.xss">
+      <DependentUpon>PositionCCTVWorkstation_DS.xsd</DependentUpon>
+    </None>
+    <None Include="PrintBarcode_DS.xsc">
+      <DependentUpon>PrintBarcode_DS.xsd</DependentUpon>
+    </None>
+    <None Include="PrintBarcode_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintBarcode_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PrintBarcode_DS.xss">
+      <DependentUpon>PrintBarcode_DS.xsd</DependentUpon>
+    </None>
+    <None Include="Scripts\My97DatePicker\WdatePicker.js.bak" />
+    <Content Include="Temp\Template\template.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <None Include="SysUsers_DS.xsc">
+      <DependentUpon>SysUsers_DS.xsd</DependentUpon>
+    </None>
+    <None Include="SysUsers_DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SysUsers_DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SysUsers_DS.xss">
+      <DependentUpon>SysUsers_DS.xsd</DependentUpon>
+    </None>
+    <None Include="User_DS.xsc">
+      <DependentUpon>User_DS.xsd</DependentUpon>
+    </None>
+    <None Include="User_DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>User_DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="User_DS.xss">
+      <DependentUpon>User_DS.xsd</DependentUpon>
+    </None>
+    <Content Include="Views\OperationLog\Index.cshtml" />
+    <Content Include="Views\OperationLog_Hawb\Index.cshtml" />
+    <Content Include="Views\OperationLog_HU\Index.cshtml" />
+    <Content Include="Views\OperationLog_Login\Index.cshtml" />
+    <Content Include="Views\OperationLog_Other\Index.cshtml" />
+    <Content Include="Views\OperationLog_Pcid\Index.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\LoginCenter\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\LoginCenter\Login.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\JobNameManagement\Index.cshtml" />
+    <Content Include="Views\SysUserManagement\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Position_CCTV_Workstation\Index.cshtml" />
+    <Content Include="Views\OperationLog_Hawb_Pcid\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{6208E215-94CA-46ED-8022-EEAAF3725FD2}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{F6A6330A-8D0B-4051-B33C-7C233D587749}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLDAL\SQLDAL.csproj">
+      <Project>{77A848AE-5F92-4644-A374-44597B28080D}</Project>
+      <Name>SQLDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{2C41C34C-7DA8-4DC9-A9A8-87D676088813}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Reports\OperationLog.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Reports\OperationLog_Hawb.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Reports\PrintBarcode.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Reports\User.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Reports\OperationLog_HU.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Reports\SysUsers.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Content\Reports\PositionCCTVWorkstation.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Reports\OperationLog_Hawb_Pcid.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>en-US1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\zh-CN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>zh-CN1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3197</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

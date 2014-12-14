@@ -1,0 +1,106 @@
+﻿@using LabelServiceSys.Models;
+<script type="text/javascript">
+@Html.Raw(LangHelper.WhichLang());
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_Title"));
+</script>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>一级二级工作内容管理</title>
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/jquery.easyui.min.js")" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/black/easyui.css")" rel="stylesheet"
+        title="black" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/bootstrap/easyui.css")" rel="stylesheet"
+        title="bootstrap"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/default/easyui.css")" rel="stylesheet"
+        title="default"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/gray/easyui.css")" rel="stylesheet"
+        title="gray"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/metro/easyui.css")" rel="stylesheet"
+        title="metro"/>
+    <link href="@Url.Content("~/JqueryUI/themes/icon.css")"  rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/JS/JobNameManagement.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/easyui-lang-zh_CN.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/My97DatePicker/WdatePicker.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JS/Common/Common.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div id="toolBar" style="padding: 2px; height: auto">
+        <a href="#" class="easyui-linkbutton" id="btnAddJobName1" iconcls="icon-add" plain="true">
+            添加一级工作流程</a><a href="#" class="easyui-linkbutton" id="btnRefresh" iconcls="icon-reload"
+                plain="true"> 刷新</a>@*&nbsp;&nbsp;&nbsp;<span style="color: Red; font-weight: bold">可双击行进行修改</span>*@
+    </div>
+    <div id="DG_JobName" fit="true" style="width: 800px; height: 600px">
+    </div>
+    <div id="dlg_Create_JobName1" data-options="iconCls:'icon-save'" style="padding: 5px;">
+        <table>
+            <tr>
+                <td>
+                    口岸
+                </td>
+                <td>
+                    <input type="text" id="txtGateWay" name="txtGateWay" />
+                    <input type="hidden" id="hd_JobName1_Id" name="hd_JobName1_Id" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    一级工作流程代码
+                </td>
+                <td>
+                    <input type="text" id="txtJobName1Code" name="txtJobName1Code" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    一级工作流程名称
+                </td>
+                <td>
+                    <input type="text" id="txtJobName1Text" name="txtJobName1Text" style="width: 200px" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="dlg_Create_JobName2" data-options="iconCls:'icon-save'" style="padding: 5px;">
+        <table>
+            <tr>
+                <td>
+                    一级工作流程
+                </td>
+                <td>
+                    <input type="text" id="txtJobName1_id_Sele" name="txtJobName1_id_Sele" />
+                    <input type="hidden" id="hd_JobName2_Id" name="hd_JobName2_Id" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    二级工作流程代码
+                </td>
+                <td>
+                    <input type="text" id="txtJobName2Code" name="txtJobName2Code" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    二级工作流程名称
+                </td>
+                <td>
+                    <input type="text" id="txtJobName2Text" name="txtJobName2Text" style="width: 200px" />
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    工位标签
+                </td>
+                <td>
+                    <input type="text" id="txtCCTV_workstation_id" name="txtCCTV_workstation_id" style="width: 200px" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

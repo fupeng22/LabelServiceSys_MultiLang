@@ -1,0 +1,75 @@
+﻿@using LabelServiceSys.Models;
+<script type="text/javascript">
+@Html.Raw(LangHelper.WhichLang());
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_Title"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_NoDataForPrint"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_NoDataForExcel"));
+@Html.Raw(Html.LangOutJsVar("Public_Dialog_ButtonOfPrint"));
+</script>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统用户信息管理</title>
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/jquery.easyui.min.js")" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/black/easyui.css")" rel="stylesheet"
+        title="black" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/bootstrap/easyui.css")" rel="stylesheet"
+        title="bootstrap"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/default/easyui.css")" rel="stylesheet"
+        title="default"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/gray/easyui.css")" rel="stylesheet"
+        title="gray"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/JqueryUI/themes/metro/easyui.css")" rel="stylesheet"
+        title="metro"/>
+    <link href="@Url.Content("~/JqueryUI/themes/icon.css")"  rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/JS/SysUserManagement.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JqueryUI/easyui-lang-zh_CN.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/My97DatePicker/WdatePicker.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JS/Common/Common.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div id="DG_UserMaintain" fit="true">
+    </div>
+    <div id="dlg_Create_User" data-options="iconCls:'icon-save'" style="padding: 5px;">
+        <table>
+            <tr>
+                <td>
+                    用户名
+                </td>
+                <td>
+                    <input type="text" id="txtUserName" name="txtUserName" />
+                    <input type="hidden" id="hd_UserId" name="hd_UserId" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    密码
+                </td>
+                <td>
+                    <input type="password" id="txtPassword" name="txtPassword" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    确认密码
+                </td>
+                <td>
+                    <input type="password" id="txtRePassword" name="txtRePassword" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    口岸
+                </td>
+                <td>
+                    <input type="text" id="cmbUnitCode" name="cmbUnitCode" style="width: 260px; height: 80px" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
